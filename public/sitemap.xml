@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://your-domain.com/</loc>
+    <loc>https://mini-trends-intelligence.vercel.app/</loc>
   </url>
 
   <url>
-    <loc>https://your-domain.com/trends</loc>
+    <loc>https://mini-trends-intelligence.vercel.app/trends</loc>
   </url>
 
   <url>
-    <loc>https://your-domain.com/viral</loc>
+    <loc>https://mini-trends-intelligence.vercel.app/viral</loc>
   </url>
 
   <url>
-    <loc>https://your-domain.com/keywords</loc>
+    <loc>https://mini-trends-intelligence.vercel.app/keywords</loc>
   </url>
 
 </urlset>
