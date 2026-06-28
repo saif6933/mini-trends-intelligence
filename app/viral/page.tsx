@@ -3,21 +3,63 @@
 import { useState, useMemo } from "react";
 import { getViralData } from "@/lib/data/datalayer";
 
+// ✅ FRONTEND CATEGORIES (clean UI layer)
 const VIRAL_CATEGORIES = [
   "All",
+  "News & Current Affairs",
+  "Disasters & Emergencies",
   "Entertainment",
-  "Politics",
   "Sports",
-  "Technology",
-  "Finance",
-  "Health",
-  "World",
+  "Tech & AI",
+  "Music",
+  "Lifestyle & Culture",
 ];
 
+// ✅ BACKEND → FRONTEND MAPPING FIX
+const normalizeCategory = (cat: string) => {
+  switch ((cat || "").toLowerCase()) {
+    case "ai":
+      return "Tech & AI";
+    case "tech & ai":
+      return "Tech & AI";
+
+    case "news":
+      return "News & Current Affairs";
+
+    case "video":
+      return "Entertainment";
+
+    case "sports":
+      return "Sports";
+
+    case "music":
+      return "Music";
+
+    case "disasters & emergencies":
+      return "Disasters & Emergencies";
+
+    case "lifestyle & culture":
+      return "Lifestyle & Culture";
+
+    default:
+      return cat;
+  }
+};
+
 export default function ViralPage() {
-  const data = [...getViralData()];
+  const rawData = getViralData();
+
+  // ✅ normalize data ONCE
+  const data = useMemo(() => {
+    return rawData.map((item: any) => ({
+      ...item,
+      category: normalizeCategory(item.category),
+    }));
+  }, [rawData]);
+
   const [category, setCategory] = useState("All");
 
+  // ✅ safe filtering
   const filteredData = useMemo(() => {
     if (category === "All") return data;
     return data.filter((item: any) => item.category === category);
@@ -42,6 +84,7 @@ export default function ViralPage() {
         {/* CATEGORY DROPDOWN */}
         <div style={styles.dropdownWrapper}>
           <label style={{ marginRight: 10 }}>Category:</label>
+
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -104,15 +147,8 @@ const styles: any = {
     color: "#fff",
     minHeight: "100vh",
   },
-
-  header: {
-    marginBottom: 25,
-  },
-
-  subtitle: {
-    color: "#999",
-    marginTop: 6,
-  },
+  header: { marginBottom: 25 },
+  subtitle: { color: "#999", marginTop: 6 },
 
   dropdownWrapper: {
     marginTop: 15,
