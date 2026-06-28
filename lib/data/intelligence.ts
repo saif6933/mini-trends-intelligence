@@ -10,10 +10,16 @@ export type ViralItem = {
 // ================= CORE DATA =================
 
 export const trendCategories = [
+  "National News",
+  "International News",
   "Politics",
   "Economy",
+  "Markets & Business",
   "Tech News",
   "AI",
+  "Space & Science",
+  "Health",
+  "Climate",
   "Sports",
   "Entertainment",
   "Music & Fashion",
@@ -70,10 +76,16 @@ const COUNTRY_SCORE_MAP: Record<string, number> = {
 };
 
 const CATEGORY_SCORE_MAP: Record<string, number> = {
-  AI: 100,
-  "Tech News": 95,
+  "National News": 88,
+  "International News": 87,
   Politics: 85,
   Economy: 80,
+  "Markets & Business": 84,
+  "Tech News": 95,
+  AI: 100,
+  "Space & Science": 90,
+  Health: 82,
+  Climate: 78,
   Sports: 75,
   Entertainment: 70,
   "Music & Fashion": 72,
@@ -99,9 +111,34 @@ const MODULE_SCORE_MAP: Record<string, number> = {
 // ================= VIRAL DATA =================
 
 export const viral: ViralItem[] = [
-  { title: "Trending YouTube Shorts", category: "video" },
-  { title: "Breaking Social Clips", category: "news" },
-  { title: "Viral AI Videos", category: "ai" },
+  {
+    title: "Breaking World Headlines",
+    category: "news",
+  },
+  {
+    title: "Global Disaster Updates",
+    category: "Disasters & Emergencies",
+  },
+  {
+    title: "Trending YouTube Shorts",
+    category: "video",
+  },
+  {
+    title: "Viral Sports Highlights",
+    category: "Sports",
+  },
+  {
+    title: "Viral AI Videos",
+    category: "ai",
+  },
+  {
+    title: "Trending Music Reels",
+    category: "Music",
+  },
+  {
+    title: "Lifestyle & Culture Moments",
+    category: "Lifestyle & Culture",
+  },
 ];
 
 // ================= HELPERS =================

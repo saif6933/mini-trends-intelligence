@@ -86,16 +86,23 @@ export function getViralData() {
 // ================= KEYWORDS =================
 
 export function getKeywordsData() {
-  return countries.flatMap((c) =>
-    keywordTypes.map((t) => ({
-      country: c,
-      type: t,
-      keyword: `${c} ${t}`,
-      score: Math.min(c.length * 2 + t.length, 100),
-      difficulty: Math.max(
-        10,
-        100 - Math.min(c.length * 2 + t.length, 100)
-      ),
-    }))
+  return countries.flatMap((country) =>
+    keywordTypes.map((type) => {
+      const score = Math.min(country.length * 2 + type.length, 100);
+
+      return {
+        keyword: `${country} ${type}`,
+        country,
+        category: "General",
+        type,
+
+        searchVolume: score * 1000,
+        growth: Math.min(score, 100),
+        intent: "Informational",
+        difficulty: Math.max(10, 100 - score),
+
+        score,
+      };
+    })
   );
 }
