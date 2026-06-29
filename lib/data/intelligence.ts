@@ -1,10 +1,11 @@
 import { countries } from "./countries";
-
 export type Country = (typeof countries)[number];
 
 export type ViralItem = {
   title: string;
-  category: string;
+  country: Country;
+  category: (typeof viralCategories)[number];
+  platform: (typeof viralPlatforms)[number];
 };
 
 // ================= CORE DATA =================
@@ -47,6 +48,18 @@ export const viralCategories = [
   "Tech & AI",
   "Music",
   "Lifestyle & Culture",
+] as const;
+
+// ================= PLATFORMS =================
+
+export const viralPlatforms = [
+  "YouTube",
+  "X (Twitter)",
+  "TikTok",
+  "Instagram",
+  "Facebook",
+  "Reddit",
+  "Google Discover",
 ] as const;
 
 const VIRAL_CATEGORY_MAP: Record<string, string> = {
@@ -113,33 +126,91 @@ const MODULE_SCORE_MAP: Record<string, number> = {
 export const viral: ViralItem[] = [
   {
     title: "Breaking World Headlines",
-    category: "news",
+    country: "United States",
+    category: "News & Current Affairs",
+    platform: "Google Discover",
   },
   {
-    title: "Global Disaster Updates",
+    title: "UK Flood Emergency",
+    country: "United Kingdom",
     category: "Disasters & Emergencies",
+    platform: "X (Twitter)",
   },
   {
-    title: "Trending YouTube Shorts",
-    category: "video",
+    title: "K-Drama Buzz",
+    country: "South Korea",
+    category: "Entertainment",
+    platform: "YouTube",
   },
   {
-    title: "Viral Sports Highlights",
+    title: "Brazil Football Fever",
+    country: "Brazil",
     category: "Sports",
+    platform: "Instagram",
   },
   {
-    title: "Viral AI Videos",
-    category: "ai",
+    title: "Japan AI Robotics",
+    country: "Japan",
+    category: "Tech & AI",
+    platform: "YouTube",
   },
   {
-    title: "Trending Music Reels",
+    title: "India Music Reels",
+    country: "India",
     category: "Music",
+    platform: "TikTok",
   },
   {
-    title: "Lifestyle & Culture Moments",
+    title: "China Lifestyle Trends",
+    country: "China",
     category: "Lifestyle & Culture",
+    platform: "Reddit",
+  },
+  {
+    title: "Germany Election Headlines",
+    country: "Germany",
+    category: "News & Current Affairs",
+    platform: "Facebook",
+  },
+  {
+    title: "France Heatwave",
+    country: "France",
+    category: "Disasters & Emergencies",
+    platform: "Google Discover",
+  },
+  {
+    title: "Canada Movie Premiere",
+    country: "Canada",
+    category: "Entertainment",
+    platform: "YouTube",
+  },
+  {
+    title: "Australia Cricket Buzz",
+    country: "Australia",
+    category: "Sports",
+    platform: "X (Twitter)",
+  },
+  {
+    title: "Spain AI Startups",
+    country: "Spain",
+    category: "Tech & AI",
+    platform: "Facebook",
+  },
+  {
+    title: "Indonesia Music Festival",
+    country: "Indonesia",
+    category: "Music",
+    platform: "TikTok",
+  },
+  {
+    title: "Mexico Travel Lifestyle",
+    country: "Mexico",
+    category: "Lifestyle & Culture",
+    platform: "Instagram",
   },
 ];
+
+// ================= HELPERS =================
 
 // ================= HELPERS =================
 
@@ -185,84 +256,94 @@ export function getTrendStrength(
 
 // ================= VIRAL ENGINE =================
 
-function resolveViralCategory(
-  rawCategory: string,
-  title: string
-): string {
-  const cat = normalize(rawCategory);
+function resolveViralCategory(category: string): string {
+  const cat = normalize(category);
 
   if (VIRAL_CATEGORY_MAP[cat]) return VIRAL_CATEGORY_MAP[cat];
 
-  const t = normalize(title);
-
-  if (t.includes("ai")) return "Tech & AI";
-
   if (
-    t.includes("news") ||
-    t.includes("breaking")
+    viralCategories.includes(category as (typeof viralCategories)[number])
   ) {
-    return "News & Current Affairs";
+    return category;
   }
-
-  if (t.includes("sports")) return "Sports";
 
   return "Entertainment";
 }
 
-export function getViralScore(
-  category: string,
-  title: string
-): number {
-  const resolved = resolveViralCategory(category, title);
+export function getViralScore(item: ViralItem): number {
+  const resolved = resolveViralCategory(item.category);
 
-  const base =
+  const categoryScore =
     VIRAL_CATEGORY_SCORE_MAP[resolved] ?? 70;
 
-  let boost = 0;
+  const countryScore =
+    COUNTRY_SCORE_MAP[item.country] ?? 50;
 
-  const t = normalize(title);
+  let platformBoost = 0;
 
-  if (t.includes("viral")) boost += 10;
-  if (t.includes("trending")) boost += 5;
+  switch (item.platform) {
+    case "Google Discover":
+      platformBoost = 8;
+      break;
+    case "YouTube":
+      platformBoost = 7;
+      break;
+    case "X (Twitter)":
+      platformBoost = 6;
+      break;
+    case "TikTok":
+      platformBoost = 6;
+      break;
+    case "Instagram":
+      platformBoost = 5;
+      break;
+    case "Facebook":
+      platformBoost = 4;
+      break;
+    case "Reddit":
+      platformBoost = 3;
+      break;
+  }
 
-  return base + boost;
+  return Math.round(
+    categoryScore * 0.55 +
+      countryScore * 0.35 +
+      platformBoost
+  );
 }
 
-export function getViralMomentum(
-  category: string,
-  title: string
-): number {
-  return (
-    getViralScore(category, title) +
-    (normalize(title).includes("trending") ? 8 : 0)
-  );
+export function getViralMomentum(item: ViralItem): number {
+  let momentum = getViralScore(item);
+
+  if (normalize(item.title).includes("breaking")) momentum += 8;
+  if (normalize(item.title).includes("viral")) momentum += 8;
+  if (normalize(item.title).includes("trending")) momentum += 5;
+
+  return momentum;
 }
 
 export function getViralPredictionScore(
-  category: string,
-  title: string
+  item: ViralItem
 ): number {
-  return Math.round(
-    getViralMomentum(category, title) * 1.1
-  );
+  return Math.round(getViralMomentum(item) * 1.1);
 }
 
-export function getViralIntelligence(
-  category: string,
-  title: string
-) {
-  const base = getViralScore(category, title);
-  const momentum = getViralMomentum(category, title);
-  const prediction = getViralPredictionScore(
-    category,
-    title
-  );
+export function getViralIntelligence(item: ViralItem) {
+  const base = getViralScore(item);
+  const momentum = getViralMomentum(item);
+  const prediction = getViralPredictionScore(item);
 
   return {
     baseScore: base,
     momentumScore: momentum,
     predictionScore: prediction,
+
+    country: item.country,
+    category: item.category,
+    platform: item.platform,
+
     isHighPotential: prediction >= 95,
+
     riskLevel:
       prediction >= 95
         ? "High"

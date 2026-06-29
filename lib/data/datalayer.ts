@@ -70,15 +70,21 @@ export function getTrendsData() {
 
 export function getViralData() {
   return viral.map((item) => {
-    const intel = getViralIntelligence(item.category, item.title);
+    const intel = getViralIntelligence(item);
 
     return {
       ...item,
+
       score: intel.baseScore,
       momentum: intel.momentumScore,
       prediction: intel.predictionScore,
+
       hot: intel.isHighPotential,
       status: intel.isHighPotential ? "HOT" : "NORMAL",
+
+      country: intel.country,
+      category: intel.category,
+      platform: intel.platform,
     };
   });
 }
