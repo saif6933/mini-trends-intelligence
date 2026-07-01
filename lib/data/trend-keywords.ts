@@ -839,3 +839,242 @@ export const trendKeywords = {
     }
   }
 };
+const Brazil = {
+  "National News": {
+    visible: [
+      "Brazil News",
+      "Brasília",
+      "President of Brazil",
+      "Federal Government",
+      "Supreme Federal Court",
+    ],
+    more: [
+      "São Paulo News",
+      "Rio de Janeiro",
+      "Public Policy",
+      "National Security",
+      "Government Reform",
+    ],
+  },
+
+  "International News": {
+    visible: [
+      "United States Brazil Relations",
+      "China Brazil Trade",
+      "Mercosur",
+      "United Nations Brazil",
+      "Latin America News",
+    ],
+    more: [
+      "EU Brazil Relations",
+      "BRICS",
+      "Global Diplomacy",
+      "South America Politics",
+      "Foreign Affairs",
+    ],
+  },
+
+  Politics: {
+    visible: [
+      "President of Brazil",
+      "Brazil Congress",
+      "Supreme Court Brazil",
+      "Lula da Silva",
+      "Political Parties Brazil",
+    ],
+    more: [
+      "Elections Brazil",
+      "Government Policy",
+      "Political Reform",
+      "State Governors",
+      "Corruption Cases",
+    ],
+  },
+
+  Economy: {
+    visible: [
+      "Brazil Economy",
+      "Brazil GDP",
+      "Inflation Brazil",
+      "Central Bank of Brazil",
+      "Exports Brazil",
+    ],
+    more: [
+      "Employment Brazil",
+      "Interest Rates",
+      "Trade Balance",
+      "Economic Growth",
+      "Real Currency",
+    ],
+  },
+
+  "Markets & Business": {
+    visible: [
+      "B3 Stock Exchange",
+      "Petrobras",
+      "Vale",
+      "Itaú Unibanco",
+      "Ambev",
+    ],
+    more: [
+      "Brazil Startups",
+      "Agribusiness",
+      "Corporate Earnings",
+      "E-commerce Brazil",
+      "Banking Sector",
+    ],
+  },
+
+  "Tech News": {
+    visible: [
+      "Brazil Tech Industry",
+      "Nubank",
+      "iFood",
+      "Embraer Technology",
+      "Brazil Startups",
+    ],
+    more: [
+      "Fintech Brazil",
+      "Artificial Intelligence",
+      "5G Brazil",
+      "Cybersecurity",
+      "Innovation Hubs",
+    ],
+  },
+
+  AI: {
+    visible: [
+      "AI Brazil",
+      "Brazil AI Startups",
+      "Nubank AI",
+      "AI Research Brazil",
+      "Machine Learning Brazil",
+    ],
+    more: [
+      "Generative AI",
+      "AI Regulation",
+      "AI Automation",
+      "Smart Cities",
+      "AI Ethics",
+    ],
+  },
+
+  "Space & Science": {
+    visible: [
+      "INPE Brazil",
+      "Brazil Space Program",
+      "Amazon Rainforest Research",
+      "Satellite Monitoring",
+      "Scientific Research Brazil",
+    ],
+    more: [
+      "Climate Studies",
+      "Astronomy Brazil",
+      "Space Technology",
+      "Environmental Science",
+      "Innovation Research",
+    ],
+  },
+
+  Health: {
+    visible: [
+      "Brazil Healthcare",
+      "Public Health Brazil",
+      "SUS Healthcare System",
+      "Medical Research Brazil",
+      "Hospitals Brazil",
+    ],
+    more: [
+      "Vaccination Brazil",
+      "Disease Control",
+      "Biotechnology",
+      "Mental Health",
+      "Health Policy",
+    ],
+  },
+
+  Climate: {
+    visible: [
+      "Amazon Rainforest",
+      "Climate Change Brazil",
+      "Deforestation",
+      "Carbon Emissions Brazil",
+      "Green Energy Brazil",
+    ],
+    more: [
+      "Biodiversity",
+      "Environmental Policy",
+      "Renewable Energy",
+      "Wildlife Protection",
+      "Sustainability",
+    ],
+  },
+
+  Sports: {
+    visible: [
+      "Brazil Football Team",
+      "Brazil Serie A",
+      "Neymar",
+      "Flamengo",
+      "Santos FC",
+    ],
+    more: [
+      "World Cup Brazil",
+      "Olympic Athletes Brazil",
+      "Volleyball Brazil",
+      "Basketball Brazil",
+      "Futsal Brazil",
+    ],
+  },
+
+  Entertainment: {
+    visible: [
+      "Brazil TV Shows",
+      "Netflix Brazil",
+      "Brazil Cinema",
+      "Globo",
+      "Celebrity News Brazil",
+    ],
+    more: [
+      "Soap Operas",
+      "Streaming Trends",
+      "Film Festivals",
+      "Music Shows",
+      "Pop Culture Brazil",
+    ],
+  },
+
+  "Music & Fashion": {
+    visible: [
+      "Brazil Music",
+      "Samba",
+      "Bossa Nova",
+      "Brazil Fashion Week",
+      "Carnival Brazil",
+    ],
+    more: [
+      "Brazilian Pop",
+      "Street Fashion",
+      "Funk Carioca",
+      "Luxury Brands Brazil",
+      "Designers Brazil",
+    ],
+  },
+
+  "Travel & Food": {
+    visible: [
+      "Rio de Janeiro",
+      "São Paulo",
+      "Amazon Tours",
+      "Brazilian BBQ",
+      "Feijoada",
+    ],
+    more: [
+      "Iguazu Falls",
+      "Copacabana Beach",
+      "Street Food Brazil",
+      "Bahia Culture",
+      "Tourism Brazil",
+    ],
+  }
+};
