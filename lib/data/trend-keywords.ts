@@ -418,8 +418,7 @@ export const trendKeywords = {
       "Business Investment",
       "Corporate Earnings",
     ],
-  },
-
+  
   // ======================================================
   // Tech News
   // ======================================================
@@ -599,5 +598,244 @@ export const trendKeywords = {
       "Historic Cities",
     ],
   }
+    },
+
+  "South Korea": {
+    "National News": {
+      visible: [
+        "South Korea News",
+        "Seoul",
+        "President of South Korea",
+        "National Assembly",
+        "Korean Government",
+      ],
+      more: [
+        "Busan News",
+        "Public Policy",
+        "Constitutional Court",
+        "Government Reform",
+        "National Security",
+      ],
+    },
+
+    "International News": {
+      visible: [
+        "North Korea",
+        "United States",
+        "China",
+        "Japan Relations",
+        "United Nations",
+      ],
+      more: [
+        "Russia Relations",
+        "US–South Korea Alliance",
+        "Indo-Pacific",
+        "Foreign Affairs",
+        "Global Summit",
+      ],
+    },
+
+    Politics: {
+      visible: [
+        "President of South Korea",
+        "National Assembly",
+        "People Power Party",
+        "Democratic Party",
+        "Government Policy",
+      ],
+      more: [
+        "Cabinet Meeting",
+        "Election Reform",
+        "Political Debate",
+        "Local Elections",
+        "Constitutional Reform",
+      ],
+    },
+
+    Economy: {
+      visible: [
+        "Bank of Korea",
+        "South Korea Economy",
+        "Inflation",
+        "GDP",
+        "Exports",
+      ],
+      more: [
+        "Employment",
+        "Trade Balance",
+        "Consumer Spending",
+        "Economic Growth",
+        "Won Exchange Rate",
+      ],
+    },
+
+    "Markets & Business": {
+      visible: [
+        "KOSPI",
+        "Samsung",
+        "Hyundai",
+        "LG",
+        "SK Group",
+      ],
+      more: [
+        "Kakao",
+        "Naver",
+        "POSCO",
+        "Corporate Earnings",
+        "Startup Ecosystem",
+      ],
+    },
+     },
+"Tech News": {
+      visible: [
+        "Samsung Electronics",
+        "LG Electronics",
+        "SK Hynix",
+        "Naver",
+        "Kakao",
+      ],
+      more: [
+        "Korean Startups",
+        "5G Technology",
+        "Semiconductors",
+        "Cybersecurity",
+        "Artificial Intelligence",
+      ],
+    },
+
+    AI: {
+      visible: [
+        "Samsung AI",
+        "LG AI",
+        "Naver HyperCLOVA",
+        "Kakao AI",
+        "AI Korea",
+      ],
+      more: [
+        "Generative AI",
+        "AI Chips",
+        "AI Robotics",
+        "Smart Factories",
+        "AI Regulation",
+      ],
+    },
+
+    "Space & Science": {
+      visible: [
+        "KARI",
+        "Nuri Rocket",
+        "Danuri Mission",
+        "Korean Space Program",
+        "Space Research",
+      ],
+      more: [
+        "Satellite Launch",
+        "Lunar Mission",
+        "Astronomy",
+        "Scientific Research",
+        "Innovation",
+      ],
+    },
+
+    Health: {
+      visible: [
+        "Korean Healthcare",
+        "National Health Insurance",
+        "Medical Research",
+        "Mental Health",
+        "Hospitals",
+      ],
+      more: [
+        "Cancer Research",
+        "Public Health",
+        "Vaccination",
+        "Biotechnology",
+        "Medical Innovation",
+      ],
+    },
+
+    Climate: {
+      visible: [
+        "Climate Change Korea",
+        "Air Quality",
+        "Renewable Energy",
+        "Carbon Neutral",
+        "Green Growth",
+      ],
+      more: [
+        "Fine Dust",
+        "Electric Vehicles",
+        "Solar Energy",
+        "Offshore Wind",
+        "Environmental Policy",
+      ],
+    },
+    Sports: {
+      visible: [
+        "K League 1",
+        "KBO League",
+        "Son Heung-min",
+        "Korean National Football Team",
+        "LPGA Korea",
+      ],
+      more: [
+        "Korean Baseball",
+        "Volleyball Korea",
+        "Badminton Korea",
+        "Esports Korea",
+        "Olympic Athletes",
+      ],
+    },
+
+    Entertainment: {
+      visible: [
+        "K-Drama",
+        "Netflix Korea",
+        "Korean Cinema",
+        "CJ ENM",
+        "SBS",
+      ],
+      more: [
+        "tvN",
+        "JTBC",
+        "Box Office Korea",
+        "Variety Shows",
+        "Celebrity News Korea",
+      ],
+    },
+
+    "Music & Fashion": {
+      visible: [
+        "BTS",
+        "BLACKPINK",
+        "NewJeans",
+        "Seoul Fashion Week",
+        "K-Pop",
+      ],
+      more: [
+        "Stray Kids",
+        "SEVENTEEN",
+        "IVE",
+        "K-Beauty",
+        "Korean Fashion",
+      ],
+    },
+
+    "Travel & Food": {
+      visible: [
+        "Seoul Travel",
+        "Jeju Island",
+        "Busan",
+        "Korean BBQ",
+        "Bibimbap",
+      ],
+      more: [
+        "Gyeongbokgung Palace",
+        "Nami Island",
+        "Kimchi",
+        "Street Food Korea",
+        "Hanok Village",
+      ],
+    }
   }
 };
