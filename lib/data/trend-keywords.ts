@@ -403,26 +403,27 @@ export const trendKeywords = {
   // ======================================================
   // Markets & Business
   // ======================================================
-  "Markets & Business": {
-    visible: [
-      "FTSE 100",
-      "London Stock Exchange",
-      "HSBC",
-      "Barclays",
-      "BP",
-    ],
-    more: [
-      "Shell",
-      "Rolls Royce",
-      "Lloyds Bank",
-      "Business Investment",
-      "Corporate Earnings",
-    ],
-  
-  // ======================================================
-  // Tech News
-  // ======================================================
-  "Tech News": {
+ "Markets & Business": {
+  visible: [
+    "FTSE 100",
+    "London Stock Exchange",
+    "HSBC",
+    "Barclays",
+    "BP",
+  ],
+  more: [
+    "Shell",
+    "Rolls Royce",
+    "Lloyds Bank",
+    "Business Investment",
+    "Corporate Earnings",
+  ],
+},
+
+// ======================================================
+// Tech News
+// ======================================================
+"Tech News": {
     visible: [
       "Apple UK",
       "Google UK",
@@ -582,7 +583,7 @@ export const trendKeywords = {
   // ======================================================
   // Travel & Food
   // ======================================================
-  "Travel & Food": {
+    "Travel & Food": {
     visible: [
       "London Travel",
       "Edinburgh",
@@ -597,9 +598,8 @@ export const trendKeywords = {
       "Fine Dining UK",
       "Historic Cities",
     ],
-  }
-    },
-
+  },
+  },
   "South Korea": {
     "National News": {
       visible: [
@@ -685,7 +685,6 @@ export const trendKeywords = {
         "Startup Ecosystem",
       ],
     },
-     },
 "Tech News": {
       visible: [
         "Samsung Electronics",
@@ -829,252 +828,293 @@ export const trendKeywords = {
         "Korean BBQ",
         "Bibimbap",
       ],
-      more: [
+more: [
         "Gyeongbokgung Palace",
         "Nami Island",
         "Kimchi",
         "Street Food Korea",
         "Hanok Village",
       ],
-    }
-  }
-};
-const Brazil = {
-  "National News": {
-    visible: [
-      "Brazil News",
-      "Brasília",
-      "President of Brazil",
-      "Federal Government",
-      "Supreme Federal Court",
-    ],
-    more: [
-      "São Paulo News",
-      "Rio de Janeiro",
-      "Public Policy",
-      "National Security",
-      "Government Reform",
-    ],
+    },
   },
+Brazil: {
+// ======================================================
+// National News
+// ======================================================
+"National News": {
+visible: [
+"Federal Government",
+"National Congress",
+"Supreme Federal Court",
+"President of Brazil",
+"Brazil Elections",
+],
+more: [
+"Public Security",
+"Sao Paulo News",
+"Rio de Janeiro News",
+"Federal Police",
+"Tax Reform",
+],
+},
+// ======================================================
+// International News
+// ======================================================
+"International News": {
+  visible: [
+    "Ukraine War",
+    "Middle East Conflict",
+    "Brazil-China Relations",
+    "Mercosur",
+    "United Nations",
+  ],
+  more: [
+    "Brazil-US Relations",
+    "Brazilian Diplomacy",
+    "World Leaders",
+    "G20 Summit",
+    "Geopolitics",
+  ],
+},
 
-  "International News": {
-    visible: [
-      "United States Brazil Relations",
-      "China Brazil Trade",
-      "Mercosur",
-      "United Nations Brazil",
-      "Latin America News",
-    ],
-    more: [
-      "EU Brazil Relations",
-      "BRICS",
-      "Global Diplomacy",
-      "South America Politics",
-      "Foreign Affairs",
-    ],
+// ======================================================
+// Politics
+// ======================================================
+Politics: {
+  visible: [
+    "President Lula",
+    "National Congress",
+    "Chamber of Deputies",
+    "Federal Senate",
+    "Political Parties",
+  ],
+  more: [
+    "Congressional Inquiry",
+    "Municipal Elections",
+    "Structural Reforms",
+    "Political Speeches",
+    "Electoral Campaign",
+  ],
+},
+
+// ======================================================
+// Economy
+// ======================================================
+Economy: {
+  visible: [
+    "IPCA Inflation",
+    "Central Bank of Brazil",
+    "Selic Interest Rate",
+    "GDP Growth",
+    "Dollar Exchange Rate",
+  ],
+  more: [
+    "Labor Market",
+    "Unemployment",
+    "Social Security",
+    "Trade Balance",
+    "Federal Budget",
+  ],
+},
+
+// ======================================================
+// Markets & Business
+// ======================================================
+"Markets & Business": {
+  visible: [
+    "Ibovespa Index",
+    "Petrobras",
+    "Vale",
+    "Itau Unibanco",
+    "Ambev",
+  ],
+  more: [
+    "Magazine Luiza",
+    "Mercado Libre",
+    "Stock Exchange",
+    "Economic Statistics",
+    "Brazilian Startups",
+  ],
+},
+
+// ======================================================
+// Tech News
+// ======================================================
+"Tech News": {
+  visible: [
+    "Pix Payment System",
+    "WhatsApp Brazil",
+    "Anatel Regulation",
+    "Mercado Libre Tech",
+    "Nubank",
+  ],
+  more: [
+    "Cybersecurity",
+    "Tech Startups",
+    "Artificial Intelligence",
+    "Tech Channels",
+    "5G in Brazil",
+  ],
+},
+
+// ======================================================
+// AI
+// ======================================================
+AI: {
+  visible: [
+    "ChatGPT",
+    "OpenAI",
+    "Google Gemini",
+    "Claude AI",
+    "AI in Brazil",
+  ],
+  more: [
+    "Generative AI",
+    "AI Regulation",
+    "AI Tools",
+    "Machine Learning",
+    "Automation",
+  ],
+},
+
+// ======================================================
+// Space & Science
+// ======================================================
+"Space & Science": {
+  visible: [
+    "Brazilian Space Agency",
+    "INPE Space Research",
+    "Alcantara Launch Center",
+    "Brazil Astronomy",
+    "Brazilian Science",
+  ],
+  more: [
+    "Scientific Research",
+    "Brazilian Satellites",
+    "INPE Climate Monitoring",
+    "Biotechnology",
+    "Technological Innovation",
+  ],
+},
+
+// ======================================================
+// Health
+// ======================================================
+Health: {
+  visible: [
+    "SUS Public Health",
+    "Ministry of Health",
+    "Anvisa Regulation",
+    "Vaccination Campaigns",
+    "Mental Health",
+  ],
+  more: [
+    "Dengue Control",
+    "Medical Research",
+    "Disease Prevention",
+    "Nutrition",
+    "Medical Innovations",
+  ],
+},
+
+// ======================================================
+// Climate
+// ======================================================
+Climate: {
+  visible: [
+    "Climate Change",
+    "Amazon Deforestation",
+    "Environmental Preservation",
+    "Renewable Energy",
+    "Energy Transition",
+  ],
+  more: [
+    "Sustainability",
+    "Water Crisis",
+    "Solar Energy",
+    "Wind Energy",
+    "Environmental Policies",
+  ],
+},
+
+// ======================================================
+// Sports
+// ======================================================
+Sports: {
+  visible: [
+    "Brazilian League Serie A",
+    "Brazil National Football Team",
+    "Copa Libertadores",
+    "Flamengo",
+    "Palmeiras",
+  ],
+  more: [
+    "Neymar Jr",
+    "Vini Jr",
+    "Formula 1",
+    "Olympic Games",
+    "Brazil Volleyball",
+  ],
+},
+
+// ======================================================
+// Entertainment
+// ======================================================
+Entertainment: {
+  visible: [
+    "Globo Soap Operas",
+    "Netflix Brazil",
+    "Brazilian Cinema",
+    "Big Brother Brazil",
+    "Globoplay",
+  ],
+  more: [
+    "Video Streaming",
+    "Brazilian Culture",
+    "Brazilian Celebrities",
+    "Award Shows",
+    "Film Festivals",
+  ],
+},
+
+// ======================================================
+// Music & Fashion
+// ======================================================
+"Music & Fashion": {
+  visible: [
+    "Anitta",
+    "Sertanejo Music",
+    "Bossa Nova",
+    "Sao Paulo Fashion Week",
+    "Havaianas",
+  ],
+  more: [
+    "Spotify Brazil",
+    "Rock in Rio",
+    "Brazilian Fashion",
+    "Brazilian Carnival",
+    "Samba Music",
+  ],
+},
+
+// ======================================================
+// Travel & Food
+// ======================================================
+"Travel & Food": {
+      visible: [
+        "Rio de Janeiro",
+        "Salvador Bahia",
+        "Gramado Tourism",
+        "Feijoada",
+        "Cheese Bread",
+      ],
+      more: [
+        "Brazilian Barbecue",
+        "Northeast Beaches",
+        "Domestic Tourism",
+        "Brazilian Gastronomy",
+        "Minas Gerais Cuisine",
+      ],
+    },
   },
-
-  Politics: {
-    visible: [
-      "President of Brazil",
-      "Brazil Congress",
-      "Supreme Court Brazil",
-      "Lula da Silva",
-      "Political Parties Brazil",
-    ],
-    more: [
-      "Elections Brazil",
-      "Government Policy",
-      "Political Reform",
-      "State Governors",
-      "Corruption Cases",
-    ],
-  },
-
-  Economy: {
-    visible: [
-      "Brazil Economy",
-      "Brazil GDP",
-      "Inflation Brazil",
-      "Central Bank of Brazil",
-      "Exports Brazil",
-    ],
-    more: [
-      "Employment Brazil",
-      "Interest Rates",
-      "Trade Balance",
-      "Economic Growth",
-      "Real Currency",
-    ],
-  },
-
-  "Markets & Business": {
-    visible: [
-      "B3 Stock Exchange",
-      "Petrobras",
-      "Vale",
-      "Itaú Unibanco",
-      "Ambev",
-    ],
-    more: [
-      "Brazil Startups",
-      "Agribusiness",
-      "Corporate Earnings",
-      "E-commerce Brazil",
-      "Banking Sector",
-    ],
-  },
-
-  "Tech News": {
-    visible: [
-      "Brazil Tech Industry",
-      "Nubank",
-      "iFood",
-      "Embraer Technology",
-      "Brazil Startups",
-    ],
-    more: [
-      "Fintech Brazil",
-      "Artificial Intelligence",
-      "5G Brazil",
-      "Cybersecurity",
-      "Innovation Hubs",
-    ],
-  },
-
-  AI: {
-    visible: [
-      "AI Brazil",
-      "Brazil AI Startups",
-      "Nubank AI",
-      "AI Research Brazil",
-      "Machine Learning Brazil",
-    ],
-    more: [
-      "Generative AI",
-      "AI Regulation",
-      "AI Automation",
-      "Smart Cities",
-      "AI Ethics",
-    ],
-  },
-
-  "Space & Science": {
-    visible: [
-      "INPE Brazil",
-      "Brazil Space Program",
-      "Amazon Rainforest Research",
-      "Satellite Monitoring",
-      "Scientific Research Brazil",
-    ],
-    more: [
-      "Climate Studies",
-      "Astronomy Brazil",
-      "Space Technology",
-      "Environmental Science",
-      "Innovation Research",
-    ],
-  },
-
-  Health: {
-    visible: [
-      "Brazil Healthcare",
-      "Public Health Brazil",
-      "SUS Healthcare System",
-      "Medical Research Brazil",
-      "Hospitals Brazil",
-    ],
-    more: [
-      "Vaccination Brazil",
-      "Disease Control",
-      "Biotechnology",
-      "Mental Health",
-      "Health Policy",
-    ],
-  },
-
-  Climate: {
-    visible: [
-      "Amazon Rainforest",
-      "Climate Change Brazil",
-      "Deforestation",
-      "Carbon Emissions Brazil",
-      "Green Energy Brazil",
-    ],
-    more: [
-      "Biodiversity",
-      "Environmental Policy",
-      "Renewable Energy",
-      "Wildlife Protection",
-      "Sustainability",
-    ],
-  },
-
-  Sports: {
-    visible: [
-      "Brazil Football Team",
-      "Brazil Serie A",
-      "Neymar",
-      "Flamengo",
-      "Santos FC",
-    ],
-    more: [
-      "World Cup Brazil",
-      "Olympic Athletes Brazil",
-      "Volleyball Brazil",
-      "Basketball Brazil",
-      "Futsal Brazil",
-    ],
-  },
-
-  Entertainment: {
-    visible: [
-      "Brazil TV Shows",
-      "Netflix Brazil",
-      "Brazil Cinema",
-      "Globo",
-      "Celebrity News Brazil",
-    ],
-    more: [
-      "Soap Operas",
-      "Streaming Trends",
-      "Film Festivals",
-      "Music Shows",
-      "Pop Culture Brazil",
-    ],
-  },
-
-  "Music & Fashion": {
-    visible: [
-      "Brazil Music",
-      "Samba",
-      "Bossa Nova",
-      "Brazil Fashion Week",
-      "Carnival Brazil",
-    ],
-    more: [
-      "Brazilian Pop",
-      "Street Fashion",
-      "Funk Carioca",
-      "Luxury Brands Brazil",
-      "Designers Brazil",
-    ],
-  },
-
-  "Travel & Food": {
-    visible: [
-      "Rio de Janeiro",
-      "São Paulo",
-      "Amazon Tours",
-      "Brazilian BBQ",
-      "Feijoada",
-    ],
-    more: [
-      "Iguazu Falls",
-      "Copacabana Beach",
-      "Street Food Brazil",
-      "Bahia Culture",
-      "Tourism Brazil",
-    ],
-  }
 };
