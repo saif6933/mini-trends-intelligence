@@ -1101,20 +1101,327 @@ Entertainment: {
 // Travel & Food
 // ======================================================
 "Travel & Food": {
-      visible: [
-        "Rio de Janeiro",
-        "Salvador Bahia",
-        "Gramado Tourism",
-        "Feijoada",
-        "Cheese Bread",
-      ],
-      more: [
-        "Brazilian Barbecue",
-        "Northeast Beaches",
-        "Domestic Tourism",
-        "Brazilian Gastronomy",
-        "Minas Gerais Cuisine",
-      ],
-    },
-  },
+  visible: [
+    "Rio de Janeiro",
+    "Salvador Bahia",
+    "Gramado Tourism",
+    "Feijoada",
+    "Cheese Bread",
+  ],
+
+  more: [
+    "Amazon Rainforest",
+    "Iguazu Falls",
+    "Brazilian Coffee",
+    "Pantanal",
+    "Copacabana Beach",
+  ],
+},
+},
+"Japan": {
+  // ======================================================
+// National News
+// ======================================================
+
+"National News": {
+  visible: [
+    "Tokyo News",
+    "Shinkansen Updates",
+    "Emperor Naruhito",
+    "Japan Weather",
+    "Imperial Family",
+  ],
+
+  more: [
+    "Diet Sessions",
+    "Osaka Expo 2025",
+    "Japan Tourism Policy",
+    "JSDF Deployment",
+    "Tax Reforms",
+  ],
+},
+
+// ======================================================
+// International News
+// ======================================================
+
+"International News": {
+  visible: [
+    "Japan-US Alliance",
+    "North Korea Missiles",
+    "East China Sea",
+    "G7 Summit",
+    "Tokyo Diplomacy",
+  ],
+
+  more: [
+    "AUKUS Cooperation",
+    "Japan-Korea Relations",
+    "Pacific Security",
+    "UN Security Council",
+    "Foreign Aid Japan",
+  ],
+},
+
+// ======================================================
+// Politics
+// ======================================================
+
+Politics: {
+  visible: [
+    "Prime Minister Ishiba",
+    "LDP Election",
+    "Diet of Japan",
+    "Tokyo Governor",
+    "Constitutional Democratic Party",
+  ],
+
+  more: [
+    "Defense Budget",
+    "Political Funding Scandal",
+    "House of Councilors",
+    "Abenomics Legacy",
+    "Japan Constitutional Reform",
+  ],
+},
+
+// ======================================================
+// Economy
+// ======================================================
+
+Economy: {
+  visible: [
+    "Bank of Japan",
+    "Yen Depreciation",
+    "Japan Inflation",
+    "BOJ Interest Rates",
+    "GDP Japan",
+  ],
+
+  more: [
+    "Labor Shortage",
+    "Minimum Wage Japan",
+    "Tokyo Stock Exchange",
+    "Japan Export Data",
+    "Corporate Governance",
+  ],
+},
+
+// ======================================================
+// Markets & Business
+// ======================================================
+
+"Markets & Business": {
+  visible: [
+    "Nikkei 225",
+    "Toyota Motor",
+    "Sony Group",
+    "SoftBank Group",
+    "Mitsubishi UFJ",
+  ],
+
+  more: [
+    "Nintendo Stocks",
+    "Uniqlo Fast Retailing",
+    "Keyence",
+    "Tokyo Electron",
+    "Honda Motor",
+  ],
+},
+
+// ======================================================
+// Tech News
+// ======================================================
+
+"Tech News": {
+  visible: [
+    "Sony PlayStation",
+    "Panasonic",
+    "Fujitsu",
+    "Canon",
+    "Hitachi",
+  ],
+
+  more: [
+    "NEC Corporation",
+    "Toshiba Restructuring",
+    "Japan Semiconductor",
+    "5G Rollout Japan",
+    "Digital Agency",
+  ],
+},
+
+// ======================================================
+// AI
+// ======================================================
+
+AI: {
+  visible: [
+    "AI Japan Strategy",
+    "Sakura Internet AI",
+    "NEC AI",
+    "SoftBank AI",
+    "Elyza LLM",
+  ],
+
+  more: [
+    "Fujitsu AI",
+    "Sony AI Research",
+    "AI Copyright Japan",
+    "Robot Ethics Japan",
+    "Preferred Networks",
+  ],
+},
+
+// ======================================================
+// Space & Science
+// ======================================================
+
+"Space & Science": {
+  visible: [
+    "JAXA",
+    "H3 Rocket",
+    "SLIM Moon Lander",
+    "Hayabusa Mission",
+    "Kibo Space Module",
+  ],
+
+  more: [
+    "Super-Kamiokande",
+    "RIKEN Institute",
+    "Fugaku Supercomputer",
+    "Japanese Astronauts",
+    "Lunar Exploration",
+  ],
+},
+
+// ======================================================
+// Health
+// ======================================================
+
+Health: {
+  visible: [
+    "Ministry of Health",
+    "Aging Population",
+    "My Number Card Health",
+    "Mental Health Japan",
+    "Cancer Research Japan",
+  ],
+
+  more: [
+    "Longevity Secrets",
+    "Super-aged Society",
+    "Japan Medical Association",
+    "Robotics in Nursing",
+    "Universal Healthcare Japan",
+  ],
+},
+
+// ======================================================
+// Climate
+// ======================================================
+
+Climate: {
+  visible: [
+    "Typhoon Season",
+    "Fukushima Water Release",
+    "Net Zero Japan",
+    "Solar Energy Japan",
+    "Tokyo Green Biz",
+  ],
+
+  more: [
+    "Offshore Wind Japan",
+    "Hydrogen Energy Strategy",
+    "Japan Earthquake Warning",
+    "Geothermal Power",
+    "Carbon Tax Japan",
+  ],
+},
+
+// ======================================================
+// Sports
+// ======================================================
+
+Sports: {
+  visible: [
+    "NPB Baseball",
+    "Sumo Wrestling",
+    "J-League Soccer",
+    "Shohei Ohtani",
+    "Japan National Rugby",
+  ],
+
+  more: [
+    "Koshien Tournament",
+    "Ekiden Relay",
+    "Yuzuru Hanyu",
+    "Naomi Osaka",
+    "Tokyo Marathon",
+  ],
+},
+
+// ======================================================
+// Entertainment
+// ======================================================
+
+Entertainment: {
+  visible: [
+    "Anime Releases",
+    "Studio Ghibli",
+    "VTubers Hololive",
+    "Netflix Japan",
+    "Weekly Shonen Jump",
+  ],
+
+  more: [
+    "Cannes Japan Films",
+    "Toho Cinema",
+    "Manga Industry",
+    "Japanese Drama",
+    "Voice Actors Japan",
+  ],
+},
+
+// ======================================================
+// Music & Fashion
+// ======================================================
+
+"Music & Fashion": {
+  visible: [
+    "J-Pop Hits",
+    "YOASOBI",
+    "Uniqlo Fashion",
+    "Harajuku Streetwear",
+    "Kenshi Yonezu",
+  ],
+
+  more: [
+    "BABYMETAL",
+    "Comme des Garcons",
+    "Issey Miyake",
+    "Tokyo Fashion Week",
+    "Oricon Charts",
+  ],
+},
+
+// ======================================================
+"Travel & Food": {
+  visible: [
+    "Kyoto Tourism",
+    "Mount Fuji Climb",
+    "Sushi Tokyo",
+    "Ramen Guide",
+    "Japan Rail Pass",
+  ],
+
+  more: [
+    "Onsen Resorts",
+    "Sake Breweries",
+    "Cherry Blossom Forecast",
+    "Osaka Street Food",
+    "Hokkaido Travel",
+   ],
+},
+},
 };
