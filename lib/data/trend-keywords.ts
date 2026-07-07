@@ -1425,3 +1425,232 @@ Entertainment: {
 },
 },
 };
+
+export const indiaTrends = {
+  "India": {
+    "National News": {
+      visible: [
+        "Lok Sabha Elections",
+        "Prime Minister of India",
+        "Parliament of India",
+        "Supreme Court of India",
+        "Monsoon Updates",
+      ],
+      more: [
+        "Aadhaar Update",
+        "Digital India",
+        "One Nation One Election",
+        "UPSC",
+        "New Education Policy",
+      ],
+    },
+    "International News": {
+      visible: [
+        "India-US Relations",
+        "BRICS Summit",
+        "India-China Relations",
+        "India-Russia Relations",
+        "United Nations",
+      ],
+      more: [
+        "G20 India",
+        "Global South",
+        "Indo-Pacific",
+        "India-EU Trade",
+        "Middle East Corridor",
+      ],
+    },
+    Politics: {
+      visible: [
+        "BJP",
+        "Indian National Congress",
+        "Lok Sabha",
+        "Rajya Sabha",
+        "Election Commission",
+      ],
+      more: [
+        "Cabinet Meeting",
+        "State Elections",
+        "Opposition Alliance",
+        "Constitution Amendment",
+        "Government Policy",
+      ],
+    },
+    Economy: {
+      visible: [
+        "RBI",
+        "GDP Growth",
+        "Inflation India",
+        "Union Budget",
+        "Interest Rates",
+      ],
+      more: [
+        "GST Collection",
+        "Rupee Exchange Rate",
+        "Employment",
+        "Economic Survey",
+        "Fiscal Deficit",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "Nifty 50",
+        "BSE Sensex",
+        "Reliance Industries",
+        "Tata Group",
+        "Infosys",
+      ],
+      more: [
+        "Adani Group",
+        "IPO Market",
+        "Startup India",
+        "SEBI",
+        "Corporate Earnings",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "UPI",
+        "5G India",
+        "Semiconductor Mission",
+        "Digital Personal Data Protection Act",
+        "Startup Ecosystem",
+      ],
+      more: [
+        "India Stack",
+        "ONDC",
+        "Fintech India",
+        "Bengaluru Tech",
+        "Electronics Manufacturing",
+      ],
+    },
+    AI: {
+      visible: [
+        "India AI Mission",
+        "Krutrim AI",
+        "Generative AI India",
+        "AI in Healthcare",
+        "Bhashini",
+      ],
+      more: [
+        "AI Education",
+        "AI Startups",
+        "AI Regulation",
+        "AI Agriculture",
+        "Machine Learning India",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "ISRO",
+        "Chandrayaan",
+        "Gaganyaan",
+        "Aditya-L1",
+        "Space Research",
+      ],
+      more: [
+        "SSLV",
+        "NISAR",
+        "Private Space India",
+        "Science Innovation",
+        "Deep Ocean Mission",
+      ],
+    },
+    Health: {
+      visible: [
+        "Ayushman Bharat",
+        "National Health Mission",
+        "Mental Health",
+        "Medical Research",
+        "Public Health",
+      ],
+      more: [
+        "Digital Health",
+        "Vaccination",
+        "Pharmaceutical Industry",
+        "Healthcare Infrastructure",
+        "Disease Prevention",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Climate Change India",
+        "Air Pollution",
+        "Renewable Energy",
+        "Solar Mission",
+        "Monsoon Forecast",
+      ],
+      more: [
+        "Net Zero 2070",
+        "Electric Vehicles",
+        "Green Hydrogen",
+        "River Conservation",
+        "Heatwave Alerts",
+      ],
+    },
+    Sports: {
+      visible: [
+        "IPL",
+        "Indian Cricket Team",
+        "Olympics India",
+        "Neeraj Chopra",
+        "Indian Super League",
+      ],
+      more: [
+        "Pro Kabaddi",
+        "Badminton India",
+        "Chess India",
+        "Hockey India",
+        "Khelo India",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "Bollywood",
+        "Netflix India",
+        "Indian Cinema",
+        "OTT India",
+        "Filmfare Awards",
+      ],
+      more: [
+        "South Indian Cinema",
+        "Celebrity News",
+        "Streaming Platforms",
+        "Reality Shows",
+        "Box Office India",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Bollywood Music",
+        "AP Dhillon",
+        "Diljit Dosanjh",
+        "Lakme Fashion Week",
+        "Indian Fashion",
+      ],
+      more: [
+        "Independent Music",
+        "Khadi",
+        "Designer Collections",
+        "Traditional Fashion",
+        "Music Festivals",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Goa Tourism",
+        "Varanasi",
+        "Kerala Backwaters",
+        "Indian Cuisine",
+        "Street Food India",
+      ],
+      more: [
+        "Ladakh",
+        "Rajasthan Tourism",
+        "Himalayan Travel",
+        "Ayurvedic Tourism",
+        "Regional Foods",
+      ],
+    },
+  },
+};
