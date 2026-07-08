@@ -1654,3 +1654,231 @@ export const indiaTrends = {
     },
   },
 };
+export const chinaTrends = {
+  "China": {
+    "National News": {
+      visible: [
+        "NPC Sessions",
+        "Beijing News",
+        "State Council",
+        "President of China",
+        "National Day China",
+      ],
+      more: [
+        "Hainan Free Trade",
+        "Shanghai Updates",
+        "Public Policy China",
+        "Five-Year Plan",
+        "National Security Law",
+      ],
+    },
+    "International News": {
+      visible: [
+        "US-China Relations",
+        "Belt and Road Initiative",
+        "BRICS Summit",
+        "Taiwan Strait",
+        "United Nations",
+      ],
+      more: [
+        "China-Russia Alliance",
+        "South China Sea",
+        "China-EU Trade",
+        "Global Diplomacy",
+        "SCO Summit",
+      ],
+    },
+    Politics: {
+      visible: [
+        "CPC",
+        "Politburo",
+        "Xi Jinping",
+        "National People's Congress",
+        "Government Policy",
+      ],
+      more: [
+        "Central Committee",
+        "Anti-Corruption Campaign",
+        "Local Government Reform",
+        "Party Ideology",
+        "State Visit",
+      ],
+    },
+    Economy: {
+      visible: [
+        "People's Bank of China",
+        "China GDP Growth",
+        "Yuan Exchange Rate",
+        "Digital Renminbi",
+        "China Exports",
+      ],
+      more: [
+        "Manufacturing PMIs",
+        "Consumer Price Index",
+        "Real Estate Market",
+        "Labor Market China",
+        "Fiscal Policy",
+      ],
+    },
+    "Business & Finance": {
+      visible: [
+        "Shanghai Composite",
+        "Alibaba Group",
+        "Tencent",
+        "BYD Company",
+        "Huawei",
+      ],
+      more: [
+        "Shenzhen Component",
+        "Meituan",
+        "JD.com",
+        "Xiaomi Stocks",
+        "State-Owned Enterprises",
+      ],
+    },
+    Technology: {
+      visible: [
+        "WeChat",
+        "5G Rollout China",
+        "Semiconductor Self-Reliance",
+        "Baidu",
+        "ByteDance",
+      ],
+      more: [
+        "6G Research",
+        "Quantum Computing China",
+        "E-commerce Tech",
+        "Cybersecurity Law",
+        "Consumer Electronics",
+      ],
+    },
+    AI: {
+      visible: [
+        "China AI Mission",
+        "Baidu Ernie Bot",
+        "Tencent Hunyuan",
+        "Alibaba Tongyi Qianwen",
+        "AI Regulation China",
+      ],
+      more: [
+        "Generative AI China",
+        "AI Microchips",
+        "Deep Learning",
+        "Smart Cities Infrastructure",
+        "AI Ethics Board",
+      ],
+    },
+    Science: {
+      visible: [
+        "CNSA",
+        "Tiangong Space Station",
+        "Chang'e Moon Mission",
+        "Tianwen Mars Mission",
+        "Long March Rocket",
+      ],
+      more: [
+        "Satellite Constellation",
+        "Deep Sea Exploration",
+        "Supercomputing China",
+        "Scientific Breakthroughs",
+        "Commercial Space Flight",
+      ],
+    },
+    Health: {
+      visible: [
+        "National Health Commission",
+        "Traditional Chinese Medicine",
+        "Medical Research China",
+        "Mental Health",
+        "Public Healthcare System",
+      ],
+      more: [
+        "Biotech Innovation",
+        "Disease Prevention",
+        "Healthy China 2030",
+        "Pharmaceutical Market",
+        "Hospital Infrastructure",
+      ],
+    },
+    Environment: {
+      visible: [
+        "Climate Change China",
+        "Carbon Peak 2030",
+        "Renewable Energy Capacity",
+        "Solar Power Manufacturing",
+        "Air Quality Standards",
+      ],
+      more: [
+        "Carbon Neutral 2060",
+        "Electric Vehicles Industry",
+        "Wind Energy Projects",
+        "Yangtze River Conservation",
+        "Green Finance",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Chinese Super League",
+        "CBA Basketball",
+        "Table Tennis China",
+        "Badminton China",
+        "Olympics Team China",
+      ],
+      more: [
+        "National Games",
+        "Diving Team China",
+        "Wushu Tournaments",
+        "Marathons in China",
+        "Sports Infrastructure",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "C-Drama",
+        "Tencent Video",
+        "iQiyi",
+        "Chinese Box Office",
+        "Spring Festival Gala",
+      ],
+      more: [
+        "Streaming Platforms China",
+        "Reality Shows",
+        "Film Festivals Beijing",
+        "Celebrity News China",
+        "Animation Industry Donghua",
+      ],
+    },
+    Lifestyle: {
+      visible: [
+        "C-Pop Hits",
+        "Jay Chou",
+        "Shanghai Fashion Week",
+        "Traditional Hanfu Fashion",
+        "Chinese Designers",
+      ],
+      more: [
+        "NetEase Cloud Music",
+        "Music Festivals China",
+        "Luxury Brands Market",
+        "Streetwear Beijing",
+        "Independent Artists",
+      ],
+    },
+    Travel: {
+      visible: [
+        "Great Wall of China",
+        "Forbidden City",
+        "Sichuan Cuisine",
+        "Dim Sum",
+        "Domestic Tourism China",
+      ],
+      more: [
+        "Guilin Landscapes",
+        "Xi'an Terracotta Warriors",
+        "Hotpot Traditions",
+        "Chinese Tea Culture",
+        "High-Speed Rail Travel",
+      ],
+    },
+  },
+};
