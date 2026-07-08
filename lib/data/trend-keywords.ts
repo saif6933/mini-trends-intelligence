@@ -3022,3 +3022,231 @@ export const spainTrends = {
     },
   },
 };
+export const indonesiaTrends = {
+  "Indonesia": {
+    "National News": {
+      visible: [
+        "President of Indonesia",
+        "Jakarta News",
+        "House of Representatives Indonesia",
+        "Government of Indonesia",
+        "Kompas News",
+      ],
+      more: [
+        "Constitutional Court Indonesia",
+        "National Police Indonesia",
+        "Public Policy Indonesia",
+        "General Elections Indonesia",
+        "Nusantara Capital",
+      ],
+    },
+    "International News": {
+      visible: [
+        "ASEAN",
+        "Indonesia China Relations",
+        "Indonesia US Relations",
+        "United Nations",
+        "G20 Indonesia",
+      ],
+      more: [
+        "South China Sea",
+        "Indo-Pacific",
+        "Global Trade",
+        "Foreign Affairs Indonesia",
+        "Regional Security",
+      ],
+    },
+    Politics: {
+      visible: [
+        "PDI-P",
+        "Gerindra Party",
+        "President Prabowo Subianto",
+        "People's Consultative Assembly",
+        "Parliament Debate",
+      ],
+      more: [
+        "Cabinet Indonesia",
+        "Election Commission Indonesia",
+        "Government Policy",
+        "Political Reform",
+        "Election Polls",
+      ],
+    },
+    Economy: {
+      visible: [
+        "Bank Indonesia",
+        "Indonesian Economy",
+        "Rupiah Exchange Rate",
+        "Inflation Indonesia",
+        "GDP Indonesia",
+      ],
+      more: [
+        "Consumer Spending",
+        "Employment Indonesia",
+        "Economic Growth",
+        "Investment Indonesia",
+        "Digital Economy",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "Indonesia Stock Exchange",
+        "Pertamina",
+        "Bank Central Asia",
+        "Bank Mandiri",
+        "Telkom Indonesia",
+      ],
+      more: [
+        "GoTo Group",
+        "Astra International",
+        "BRI Bank",
+        "Business News Indonesia",
+        "Palm Oil Industry",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "GoTo",
+        "Tokopedia",
+        "Telkom Indonesia",
+        "Indonesian Tech",
+        "Digital Indonesia",
+      ],
+      more: [
+        "Tech Startups",
+        "Cybersecurity",
+        "Cloud Computing",
+        "FinTech Indonesia",
+        "5G Indonesia",
+      ],
+    },
+    AI: {
+      visible: [
+        "OpenAI",
+        "Google Gemini",
+        "Indonesian AI",
+        "AI Indonesia",
+        "AI Research",
+      ],
+      more: [
+        "Generative AI",
+        "Machine Learning",
+        "AI Regulation",
+        "AI Innovation",
+        "Robotics Indonesia",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "BRIN",
+        "LAPAN",
+        "Space Research Indonesia",
+        "Scientific Research",
+        "Astronomy Indonesia",
+      ],
+      more: [
+        "Satellite Technology",
+        "Volcanology Research",
+        "Marine Science",
+        "Innovation Indonesia",
+        "Space Exploration",
+      ],
+    },
+    Health: {
+      visible: [
+        "Ministry of Health Indonesia",
+        "BPJS Health",
+        "Public Health Indonesia",
+        "Medical Research",
+        "Mental Health",
+      ],
+      more: [
+        "Vaccination",
+        "Biotechnology",
+        "Disease Prevention",
+        "Healthcare Innovation",
+        "Health Policy",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Climate Change Indonesia",
+        "Deforestation",
+        "Renewable Energy",
+        "Forest Fires",
+        "Clean Energy",
+      ],
+      more: [
+        "Carbon Emissions",
+        "Environmental Policy",
+        "Solar Energy",
+        "Biodiversity Indonesia",
+        "Net Zero Indonesia",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Indonesia National Football Team",
+        "Liga 1 Indonesia",
+        "Badminton Indonesia",
+        "MotoGP Indonesia",
+        "PSSI",
+      ],
+      more: [
+        "Thomas Cup",
+        "SEA Games",
+        "Olympic Team Indonesia",
+        "Basketball Indonesia",
+        "Volleyball Indonesia",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "Netflix Indonesia",
+        "Indonesian Cinema",
+        "RCTI",
+        "SCTV",
+        "Vidio",
+      ],
+      more: [
+        "Celebrity News Indonesia",
+        "Streaming Indonesia",
+        "TV Shows Indonesia",
+        "Film Festivals",
+        "Entertainment News",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Rich Brian",
+        "Agnez Mo",
+        "Indonesian Fashion Week",
+        "Batik Fashion",
+        "Indonesian Music",
+      ],
+      more: [
+        "Spotify Indonesia",
+        "Fashion Designers",
+        "Luxury Fashion",
+        "Music Awards",
+        "Local Designers",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Bali Tourism",
+        "Jakarta Travel",
+        "Borobudur Temple",
+        "Komodo Island",
+        "Nasi Goreng",
+      ],
+      more: [
+        "Raja Ampat",
+        "Mount Bromo",
+        "Yogyakarta Tourism",
+        "Satay Indonesia",
+        "Lake Toba",
+      ],
+    },
+  },
+};
