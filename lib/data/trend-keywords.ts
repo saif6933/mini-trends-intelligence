@@ -2338,3 +2338,231 @@ export const franceTrends = {
     },
   },
 };
+export const canadaTrends = {
+  "Canada": {
+    "National News": {
+      visible: [
+        "Parliament of Canada",
+        "Prime Minister of Canada",
+        "Ottawa News",
+        "House of Commons Canada",
+        "Government of Canada",
+      ],
+      more: [
+        "CBC News",
+        "Elections Canada",
+        "Public Safety Canada",
+        "Federal Court Canada",
+        "Canadian Immigration",
+      ],
+    },
+    "International News": {
+      visible: [
+        "Canada US Relations",
+        "NATO",
+        "United Nations",
+        "G7 Summit",
+        "Arctic Security",
+      ],
+      more: [
+        "Canada China Relations",
+        "Ukraine Support",
+        "Indo-Pacific Strategy",
+        "Global Trade",
+        "Foreign Affairs Canada",
+      ],
+    },
+    Politics: {
+      visible: [
+        "Liberal Party of Canada",
+        "Conservative Party Canada",
+        "Pierre Poilievre",
+        "Mark Carney",
+        "Parliament Debate",
+      ],
+      more: [
+        "Federal Election",
+        "Cabinet Ministers",
+        "Election Polls",
+        "Carbon Tax",
+        "Government Policy",
+      ],
+    },
+    Economy: {
+      visible: [
+        "Bank of Canada",
+        "Canadian Economy",
+        "Inflation Canada",
+        "GDP Canada",
+        "Interest Rates",
+      ],
+      more: [
+        "Employment Canada",
+        "Housing Market Canada",
+        "Consumer Spending",
+        "Economic Growth",
+        "Canadian Dollar",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "Toronto Stock Exchange",
+        "Shopify",
+        "RBC",
+        "TD Bank",
+        "Brookfield",
+      ],
+      more: [
+        "Canadian Pacific Kansas City",
+        "Enbridge",
+        "Suncor Energy",
+        "BCE Inc",
+        "Business News Canada",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "Shopify",
+        "OpenText",
+        "BlackBerry",
+        "Canadian Tech",
+        "AI Canada",
+      ],
+      more: [
+        "Cybersecurity",
+        "Cloud Computing",
+        "Quantum Computing",
+        "Tech Startups",
+        "5G Canada",
+      ],
+    },
+    AI: {
+      visible: [
+        "Cohere AI",
+        "OpenAI",
+        "Google Gemini",
+        "Canadian AI",
+        "Vector Institute",
+      ],
+      more: [
+        "Generative AI",
+        "Machine Learning",
+        "AI Regulation",
+        "AI Research",
+        "AI Startups",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "Canadian Space Agency",
+        "Canadarm",
+        "Space Research Canada",
+        "Scientific Research",
+        "Astronomy Canada",
+      ],
+      more: [
+        "Satellite Technology",
+        "Arctic Research",
+        "Climate Science",
+        "Innovation Canada",
+        "Space Exploration",
+      ],
+    },
+    Health: {
+      visible: [
+        "Health Canada",
+        "Public Health Canada",
+        "Canadian Healthcare",
+        "Mental Health",
+        "Medical Research",
+      ],
+      more: [
+        "Cancer Research",
+        "Vaccination",
+        "Public Health",
+        "Biotechnology",
+        "Health Innovation",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Climate Change Canada",
+        "Wildfires Canada",
+        "Renewable Energy",
+        "Carbon Emissions",
+        "Clean Energy",
+      ],
+      more: [
+        "Electric Vehicles",
+        "Green Hydrogen",
+        "Solar Energy",
+        "Environmental Policy",
+        "Net Zero Canada",
+      ],
+    },
+    Sports: {
+      visible: [
+        "NHL",
+        "Toronto Maple Leafs",
+        "Montreal Canadiens",
+        "Team Canada",
+        "CFL",
+      ],
+      more: [
+        "Stanley Cup",
+        "NBA Canada",
+        "MLS Canada",
+        "Olympic Team Canada",
+        "Hockey Canada",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "CBC",
+        "Netflix Canada",
+        "TIFF",
+        "Canadian Cinema",
+        "Bell Media",
+      ],
+      more: [
+        "Crave",
+        "Celebrity News Canada",
+        "Film Festivals",
+        "TV Shows Canada",
+        "Streaming Canada",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Drake",
+        "The Weeknd",
+        "Justin Bieber",
+        "Toronto Fashion Week",
+        "Lululemon",
+      ],
+      more: [
+        "Spotify Canada",
+        "Canadian Music",
+        "Fashion Designers",
+        "Luxury Fashion",
+        "Music Awards",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Niagara Falls",
+        "Banff National Park",
+        "Vancouver Travel",
+        "Poutine",
+        "Maple Syrup",
+      ],
+      more: [
+        "Jasper National Park",
+        "CN Tower",
+        "Canadian Rockies",
+        "Seafood Canada",
+        "Quebec Tourism",
+      ],
+    },
+  },
+};
