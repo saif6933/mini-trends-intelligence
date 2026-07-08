@@ -2110,3 +2110,231 @@ export const germanyTrends = {
     },
   },
 };
+export const franceTrends = {
+  "France": {
+    "National News": {
+      visible: [
+        "Le Monde News",
+        "Paris Updates",
+        "National Assembly",
+        "Bastille Day France",
+        "Prime Minister France",
+      ],
+      more: [
+        "Public Policy France",
+        "Constitutional Council",
+        "French Pension Reform",
+        "Security Laws France",
+        "Local Government Updates",
+      ],
+    },
+    "International News": {
+      visible: [
+        "European Union Policy",
+        "France US Relations",
+        "NATO Summit",
+        "France Africa Relations",
+        "G7 Summit",
+      ],
+      more: [
+        "United Nations France",
+        "Schengen Area Updates",
+        "Franco German Alliance",
+        "European Parliament",
+        "Global Diplomacy Paris",
+      ],
+    },
+    Politics: {
+      visible: [
+        "Emmanuel Macron",
+        "National Rally",
+        "Renaissance Party",
+        "La France Insoumise",
+        "French Senate",
+      ],
+      more: [
+        "Cabinet Meeting",
+        "Élysée Palace",
+        "Political Debate France",
+        "Municipal Elections",
+        "Government Decree",
+      ],
+    },
+    Economy: {
+      visible: [
+        "Banque de France",
+        "France GDP Growth",
+        "Euro Exchange Rate",
+        "Inflation France",
+        "French Exports",
+      ],
+      more: [
+        "CAC 40 Performance",
+        "Consumer Price Index France",
+        "Labor Market Report",
+        "Fiscal Policy Paris",
+        "Purchasing Power France",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "LVMH",
+        "TotalEnergies",
+        "Sanofi",
+        "BNP Paribas",
+        "L'Oréal Group",
+      ],
+      more: [
+        "Paris Stock Exchange",
+        "Airbus Stocks",
+        "Renault Group",
+        "AXA Insurance",
+        "Michelin Tires",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "French Tech Ecosystem",
+        "Station F",
+        "Orange Telecom",
+        "Cybersecurity France",
+        "5G Rollout France",
+      ],
+      more: [
+        "Digital Republic Act",
+        "Tech Startups Paris",
+        "Cloud Computing France",
+        "OVHcloud",
+        "Consumer Electronics France",
+      ],
+    },
+    AI: {
+      visible: [
+        "Mistral AI",
+        "France AI Strategy",
+        "AI Regulation Europe",
+        "Generative AI France",
+        "Data Science Paris",
+      ],
+      more: [
+        "Machine Learning France",
+        "AI Ethics Board",
+        "Industrial Automation AI",
+        "VivaTech AI",
+        "Computer Vision Research",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "CNES",
+        "Ariane Rocket",
+        "European Space Agency",
+        "CNRS Research",
+        "Kourou Spaceport",
+      ],
+      more: [
+        "Quantum Computing France",
+        "ITER Fusion Energy",
+        "Scientific Breakthroughs",
+        "Aerospace Innovation",
+        "Deep Sea Exploration",
+      ],
+    },
+    Health: {
+      visible: [
+        "Ministry of Health France",
+        "Inserm",
+        "Pasteur Institute",
+        "French Healthcare System",
+        "Mental Health France",
+      ],
+      more: [
+        "Biotech Innovation Paris",
+        "Pharmaceutical Market",
+        "Hospital Infrastructure",
+        "Medical Research France",
+        "Public Health Campaigns",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Paris Climate Agreement",
+        "Green Energy France",
+        "Nuclear Power Infrastructure",
+        "Carbon Neutral 2050",
+        "Solar Energy Manufacturing",
+      ],
+      more: [
+        "Electric Vehicles France",
+        "Wind Energy Projects",
+        "Eco Tax Regulations",
+        "Biodiversity Conservation",
+        "Rhône River Conservation",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Ligue 1 Football",
+        "Paris Saint Germain",
+        "Tour de France",
+        "Roland Garros Tennis",
+        "France National Football Team",
+      ],
+      more: [
+        "Top 14 Rugby",
+        "Olympics Team France",
+        "French Cup",
+        "Le Mans 24 Hours",
+        "Sports Infrastructure",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "Cannes Film Festival",
+        "French Cinema",
+        "Netflix France",
+        "Canal Plus Production",
+        "César Awards",
+      ],
+      more: [
+        "Streaming Platforms France",
+        "Reality TV France",
+        "Theatre Paris",
+        "Celebrity News France",
+        "Animation Industry France",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Paris Fashion Week",
+        "Chanel",
+        "Dior",
+        "French Pop Hits",
+        "Daft Punk",
+      ],
+      more: [
+        "French Electro Music",
+        "Luxury Brands Market",
+        "Haute Couture Paris",
+        "Independent Music France",
+        "Streetwear France",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Eiffel Tower",
+        "Louvre Museum",
+        "French Wine Regions",
+        "Michelin Guide Restaurants",
+        "Bordeaux Wine",
+      ],
+      more: [
+        "Palace of Versailles",
+        "French Pastry Culture",
+        "TGV High Speed Rail",
+        "French Riviera Tourism",
+        "Gastronomy France",
+      ],
+    },
+  },
+};
