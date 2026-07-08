@@ -2566,3 +2566,231 @@ export const canadaTrends = {
     },
   },
 };
+export const australiaTrends = {
+  "Australia": {
+    "National News": {
+      visible: [
+        "Parliament of Australia",
+        "Prime Minister of Australia",
+        "Canberra News",
+        "Australian Government",
+        "ABC News",
+      ],
+      more: [
+        "High Court of Australia",
+        "Federal Election Australia",
+        "Immigration Australia",
+        "National Security Australia",
+        "Public Policy Australia",
+      ],
+    },
+    "International News": {
+      visible: [
+        "Australia US Alliance",
+        "Indo-Pacific",
+        "AUKUS",
+        "United Nations",
+        "G20 Summit",
+      ],
+      more: [
+        "Australia China Relations",
+        "Pacific Islands",
+        "NATO",
+        "Global Trade",
+        "Foreign Affairs Australia",
+      ],
+    },
+    Politics: {
+      visible: [
+        "Australian Labor Party",
+        "Liberal Party Australia",
+        "Anthony Albanese",
+        "Parliament Debate",
+        "Federal Election",
+      ],
+      more: [
+        "Coalition Government",
+        "Cabinet Ministers",
+        "Election Polls",
+        "Opposition Leader",
+        "Government Policy",
+      ],
+    },
+    Economy: {
+      visible: [
+        "Reserve Bank of Australia",
+        "Australian Economy",
+        "Inflation Australia",
+        "GDP Australia",
+        "Interest Rates",
+      ],
+      more: [
+        "Employment Australia",
+        "Housing Market Australia",
+        "Consumer Spending",
+        "Australian Dollar",
+        "Economic Growth",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "ASX",
+        "BHP",
+        "Commonwealth Bank",
+        "Rio Tinto",
+        "Woolworths Group",
+      ],
+      more: [
+        "Westpac",
+        "ANZ Bank",
+        "Qantas",
+        "Fortescue Metals",
+        "Business News Australia",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "Atlassian",
+        "Canva",
+        "Australian Tech",
+        "5G Australia",
+        "Cybersecurity Australia",
+      ],
+      more: [
+        "Tech Startups",
+        "Cloud Computing",
+        "Digital Australia",
+        "FinTech Australia",
+        "Innovation Australia",
+      ],
+    },
+    AI: {
+      visible: [
+        "OpenAI",
+        "Google Gemini",
+        "Australian AI",
+        "CSIRO AI",
+        "AI Australia",
+      ],
+      more: [
+        "Generative AI",
+        "Machine Learning",
+        "AI Regulation",
+        "AI Research",
+        "Robotics Australia",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "Australian Space Agency",
+        "CSIRO",
+        "Space Research Australia",
+        "Scientific Research",
+        "Astronomy Australia",
+      ],
+      more: [
+        "Satellite Technology",
+        "Climate Research",
+        "Marine Science",
+        "Innovation Australia",
+        "Space Exploration",
+      ],
+    },
+    Health: {
+      visible: [
+        "Department of Health Australia",
+        "Medicare Australia",
+        "Public Health Australia",
+        "Mental Health",
+        "Medical Research",
+      ],
+      more: [
+        "Cancer Research",
+        "Vaccination",
+        "Biotechnology",
+        "Healthcare Australia",
+        "Health Innovation",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Climate Change Australia",
+        "Bushfires Australia",
+        "Renewable Energy",
+        "Great Barrier Reef",
+        "Clean Energy",
+      ],
+      more: [
+        "Solar Energy",
+        "Wind Energy",
+        "Carbon Emissions",
+        "Environmental Policy",
+        "Net Zero Australia",
+      ],
+    },
+    Sports: {
+      visible: [
+        "AFL",
+        "Cricket Australia",
+        "NRL",
+        "Australian Open",
+        "Socceroos",
+      ],
+      more: [
+        "Big Bash League",
+        "Wallabies Rugby",
+        "Formula 1 Australia",
+        "Olympic Team Australia",
+        "Australian Football",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "ABC Australia",
+        "Netflix Australia",
+        "Australian Cinema",
+        "Home and Away",
+        "Nine Network",
+      ],
+      more: [
+        "Stan Australia",
+        "Celebrity News Australia",
+        "Film Festivals",
+        "TV Shows Australia",
+        "Streaming Australia",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "AC/DC",
+        "Tame Impala",
+        "Sia",
+        "Australian Fashion Week",
+        "RM Williams",
+      ],
+      more: [
+        "Spotify Australia",
+        "Australian Music",
+        "Fashion Designers",
+        "Luxury Fashion",
+        "Music Awards",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Sydney Opera House",
+        "Great Barrier Reef",
+        "Melbourne Travel",
+        "Bondi Beach",
+        "Vegemite",
+      ],
+      more: [
+        "Uluru",
+        "Great Ocean Road",
+        "Tasmania Travel",
+        "Australian BBQ",
+        "Gold Coast Tourism",
+      ],
+    },
+  },
+};
