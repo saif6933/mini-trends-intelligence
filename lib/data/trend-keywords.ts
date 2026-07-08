@@ -3250,3 +3250,231 @@ export const indonesiaTrends = {
     },
   },
 };
+export const mexicoTrends = {
+  "Mexico": {
+    "National News": {
+      visible: [
+        "President of Mexico",
+        "Mexico City News",
+        "Government of Mexico",
+        "Chamber of Deputies Mexico",
+        "Senate of Mexico",
+      ],
+      more: [
+        "Supreme Court of Mexico",
+        "National Guard Mexico",
+        "Public Policy Mexico",
+        "Federal Elections Mexico",
+        "National Palace Mexico",
+      ],
+    },
+    "International News": {
+      visible: [
+        "Mexico US Relations",
+        "US Mexico Border",
+        "United Nations",
+        "G20 Summit",
+        "Latin America",
+      ],
+      more: [
+        "Mexico Canada Relations",
+        "Global Trade",
+        "Foreign Affairs Mexico",
+        "Pacific Alliance",
+        "North America",
+      ],
+    },
+    Politics: {
+      visible: [
+        "Morena Party",
+        "National Action Party",
+        "Institutional Revolutionary Party",
+        "President Claudia Sheinbaum",
+        "Congress of the Union",
+      ],
+      more: [
+        "Cabinet of Mexico",
+        "Election Polls Mexico",
+        "Government Policy",
+        "Political Reform",
+        "Electoral Institute Mexico",
+      ],
+    },
+    Economy: {
+      visible: [
+        "Bank of Mexico",
+        "Mexican Economy",
+        "Mexican Peso",
+        "Inflation Mexico",
+        "GDP Mexico",
+      ],
+      more: [
+        "Employment Mexico",
+        "Consumer Spending",
+        "Foreign Investment",
+        "Manufacturing Mexico",
+        "Economic Growth",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "Mexican Stock Exchange",
+        "Pemex",
+        "America Movil",
+        "Grupo Bimbo",
+        "Cemex",
+      ],
+      more: [
+        "FEMSA",
+        "Banorte",
+        "Business News Mexico",
+        "Automotive Industry Mexico",
+        "Nearshoring Mexico",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "Mexican Tech",
+        "FinTech Mexico",
+        "Digital Mexico",
+        "Cybersecurity Mexico",
+        "5G Mexico",
+      ],
+      more: [
+        "Tech Startups",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Innovation Mexico",
+        "E-commerce Mexico",
+      ],
+    },
+    AI: {
+      visible: [
+        "OpenAI",
+        "Google Gemini",
+        "AI Mexico",
+        "Mexican AI",
+        "AI Research",
+      ],
+      more: [
+        "Generative AI",
+        "Machine Learning",
+        "AI Regulation",
+        "AI Innovation",
+        "Robotics Mexico",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "Mexican Space Agency",
+        "UNAM Research",
+        "Scientific Research Mexico",
+        "Astronomy Mexico",
+        "Space Science Mexico",
+      ],
+      more: [
+        "Satellite Technology",
+        "Climate Research",
+        "Biotechnology",
+        "Innovation Mexico",
+        "Space Exploration",
+      ],
+    },
+    Health: {
+      visible: [
+        "Ministry of Health Mexico",
+        "IMSS",
+        "Public Health Mexico",
+        "Medical Research",
+        "Mental Health",
+      ],
+      more: [
+        "Vaccination",
+        "Disease Prevention",
+        "Biotechnology",
+        "Healthcare Innovation",
+        "Health Policy Mexico",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Climate Change Mexico",
+        "Renewable Energy",
+        "Water Crisis Mexico",
+        "Clean Energy",
+        "Environmental Protection",
+      ],
+      more: [
+        "Solar Energy",
+        "Wind Energy",
+        "Carbon Emissions",
+        "Environmental Policy",
+        "Biodiversity Mexico",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Liga MX",
+        "Mexico National Football Team",
+        "Club America",
+        "Chivas Guadalajara",
+        "Formula 1 Mexico",
+      ],
+      more: [
+        "CONCACAF",
+        "Boxing Mexico",
+        "Baseball Mexico",
+        "Olympic Team Mexico",
+        "Mexican Grand Prix",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "Televisa",
+        "Netflix Mexico",
+        "Mexican Cinema",
+        "TV Azteca",
+        "Streaming Mexico",
+      ],
+      more: [
+        "Celebrity News Mexico",
+        "Film Festivals",
+        "TV Shows Mexico",
+        "Entertainment News",
+        "Mexican Series",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Luis Miguel",
+        "Peso Pluma",
+        "Thalia",
+        "Mercedes-Benz Fashion Week Mexico",
+        "Mexican Fashion",
+      ],
+      more: [
+        "Spotify Mexico",
+        "Regional Mexican Music",
+        "Fashion Designers",
+        "Luxury Fashion",
+        "Latin Music Awards",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Cancun",
+        "Mexico City Tourism",
+        "Chichen Itza",
+        "Tacos",
+        "Riviera Maya",
+      ],
+      more: [
+        "Los Cabos",
+        "Oaxaca Tourism",
+        "Teotihuacan",
+        "Guacamole",
+        "Puerto Vallarta",
+      ],
+    },
+  },
+};
