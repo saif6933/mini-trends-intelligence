@@ -2794,3 +2794,231 @@ export const australiaTrends = {
     },
   },
 };
+export const spainTrends = {
+  "Spain": {
+    "National News": {
+      visible: [
+        "Parliament of Spain",
+        "Prime Minister of Spain",
+        "Madrid News",
+        "Government of Spain",
+        "RTVE News",
+      ],
+      more: [
+        "Constitutional Court Spain",
+        "General Elections Spain",
+        "Catalonia News",
+        "National Police Spain",
+        "Public Policy Spain",
+      ],
+    },
+    "International News": {
+      visible: [
+        "Spain EU Relations",
+        "NATO",
+        "European Union",
+        "G20 Summit",
+        "United Nations",
+      ],
+      more: [
+        "Spain Morocco Relations",
+        "Mediterranean Security",
+        "Foreign Affairs Spain",
+        "Global Trade",
+        "European Parliament",
+      ],
+    },
+    Politics: {
+      visible: [
+        "People's Party Spain",
+        "PSOE",
+        "Prime Minister Pedro Sanchez",
+        "Congress of Deputies",
+        "Senate of Spain",
+      ],
+      more: [
+        "Coalition Government",
+        "Election Polls",
+        "Cabinet Ministers",
+        "Political Debate",
+        "Government Policy",
+      ],
+    },
+    Economy: {
+      visible: [
+        "Bank of Spain",
+        "Spanish Economy",
+        "Inflation Spain",
+        "GDP Spain",
+        "Tourism Economy",
+      ],
+      more: [
+        "Employment Spain",
+        "Housing Market Spain",
+        "Consumer Spending",
+        "Euro Exchange Rate",
+        "Economic Growth",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "IBEX 35",
+        "Santander",
+        "BBVA",
+        "Inditex",
+        "Telefonica",
+      ],
+      more: [
+        "Repsol",
+        "Ferrovial",
+        "Iberdrola",
+        "CaixaBank",
+        "Business News Spain",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "Telefonica Tech",
+        "Spanish Tech",
+        "Cybersecurity Spain",
+        "5G Spain",
+        "Digital Spain",
+      ],
+      more: [
+        "Tech Startups",
+        "Cloud Computing",
+        "FinTech Spain",
+        "Innovation Spain",
+        "Barcelona Tech",
+      ],
+    },
+    AI: {
+      visible: [
+        "OpenAI",
+        "Google Gemini",
+        "Spanish AI",
+        "AI Spain",
+        "AI Research Spain",
+      ],
+      more: [
+        "Generative AI",
+        "Machine Learning",
+        "AI Regulation",
+        "AI Innovation",
+        "Robotics Spain",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "Spanish Space Agency",
+        "CSIC",
+        "Space Research Spain",
+        "Scientific Research",
+        "Astronomy Spain",
+      ],
+      more: [
+        "Satellite Technology",
+        "Renewable Research",
+        "Climate Science",
+        "Innovation Spain",
+        "Space Exploration",
+      ],
+    },
+    Health: {
+      visible: [
+        "Ministry of Health Spain",
+        "Spanish Healthcare",
+        "Public Health Spain",
+        "Mental Health",
+        "Medical Research",
+      ],
+      more: [
+        "Cancer Research",
+        "Vaccination",
+        "Biotechnology",
+        "Healthcare Innovation",
+        "Health Policy Spain",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Climate Change Spain",
+        "Renewable Energy",
+        "Solar Energy Spain",
+        "Drought Spain",
+        "Clean Energy",
+      ],
+      more: [
+        "Wind Energy",
+        "Carbon Emissions",
+        "Environmental Policy",
+        "Water Management",
+        "Net Zero Spain",
+      ],
+    },
+    Sports: {
+      visible: [
+        "La Liga",
+        "Real Madrid",
+        "FC Barcelona",
+        "Spain National Football Team",
+        "Rafael Nadal",
+      ],
+      more: [
+        "Copa del Rey",
+        "Spanish Grand Prix",
+        "ACB Basketball",
+        "Davis Cup",
+        "Olympic Team Spain",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "RTVE",
+        "Netflix Spain",
+        "Spanish Cinema",
+        "Movistar Plus",
+        "Atresmedia",
+      ],
+      more: [
+        "Celebrity News Spain",
+        "Film Festivals",
+        "TV Shows Spain",
+        "Streaming Spain",
+        "Entertainment News",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Rosalia",
+        "Enrique Iglesias",
+        "Zara",
+        "Madrid Fashion Week",
+        "Mango Fashion",
+      ],
+      more: [
+        "Spotify Spain",
+        "Spanish Music",
+        "Fashion Designers",
+        "Luxury Fashion",
+        "Music Awards",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Barcelona Travel",
+        "Madrid Tourism",
+        "Sagrada Familia",
+        "Paella",
+        "Ibiza",
+      ],
+      more: [
+        "Costa del Sol",
+        "Seville Tourism",
+        "Canary Islands",
+        "Tapas",
+        "Camino de Santiago",
+      ],
+    },
+  },
+};
