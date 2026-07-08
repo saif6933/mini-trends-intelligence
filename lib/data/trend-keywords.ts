@@ -1882,3 +1882,231 @@ export const chinaTrends = {
     },
   },
 };
+export const germanyTrends = {
+  "Germany": {
+    "National News": {
+      visible: [
+        "Bundestag",
+        "Chancellor of Germany",
+        "Berlin News",
+        "Federal Government",
+        "German Politics",
+      ],
+      more: [
+        "Federal Constitutional Court",
+        "State Elections Germany",
+        "Migration Policy",
+        "German Economy News",
+        "Public Security",
+      ],
+    },
+    "International News": {
+      visible: [
+        "European Union",
+        "Germany US Relations",
+        "NATO",
+        "Ukraine War",
+        "G7 Summit",
+      ],
+      more: [
+        "Russia Germany Relations",
+        "China Germany Trade",
+        "Middle East",
+        "United Nations",
+        "European Parliament",
+      ],
+    },
+    Politics: {
+      visible: [
+        "CDU",
+        "SPD",
+        "AfD",
+        "The Greens",
+        "Bundestag",
+      ],
+      more: [
+        "Coalition Government",
+        "Federal Election",
+        "German Cabinet",
+        "Migration Debate",
+        "Political Reform",
+      ],
+    },
+    Economy: {
+      visible: [
+        "German Economy",
+        "Inflation Germany",
+        "European Central Bank",
+        "GDP Germany",
+        "Euro Exchange Rate",
+      ],
+      more: [
+        "German Exports",
+        "Industrial Production",
+        "Employment Germany",
+        "Economic Growth",
+        "Consumer Confidence",
+      ],
+    },
+    "Markets & Business": {
+      visible: [
+        "Volkswagen",
+        "BMW",
+        "Mercedes-Benz",
+        "Siemens",
+        "SAP",
+      ],
+      more: [
+        "Deutsche Bank",
+        "Allianz",
+        "BASF",
+        "DAX Index",
+        "Frankfurt Stock Exchange",
+      ],
+    },
+    "Tech News": {
+      visible: [
+        "SAP",
+        "Deutsche Telekom",
+        "Infineon",
+        "German Startups",
+        "5G Germany",
+      ],
+      more: [
+        "Cybersecurity",
+        "Cloud Computing",
+        "Semiconductors",
+        "Digital Germany",
+        "Tech Innovation",
+      ],
+    },
+    AI: {
+      visible: [
+        "Aleph Alpha",
+        "German AI",
+        "OpenAI",
+        "Google Gemini",
+        "Industrial AI",
+      ],
+      more: [
+        "Generative AI",
+        "AI Regulation",
+        "Machine Learning",
+        "AI Robotics",
+        "Smart Manufacturing",
+      ],
+    },
+    "Space & Science": {
+      visible: [
+        "Max Planck",
+        "Fraunhofer Institute",
+        "DLR Aerospace",
+        "German Science",
+        "European Space Agency",
+      ],
+      more: [
+        "Quantum Research",
+        "Hydrogen Technology",
+        "Biotech Innovation",
+        "Fusion Energy",
+        "Scientific Breakthroughs",
+      ],
+    },
+    Health: {
+      visible: [
+        "Robert Koch Institute",
+        "Health Ministry",
+        "German Healthcare",
+        "Charite Berlin",
+        "Mental Health",
+      ],
+      more: [
+        "Digital Health",
+        "Medical Research",
+        "BioNTech",
+        "Health Insurance",
+        "Pharmaceuticals",
+      ],
+    },
+    Climate: {
+      visible: [
+        "Energiewende",
+        "Climate Action Germany",
+        "Green Energy",
+        "Solar Expansion",
+        "Wind Power Germany",
+      ],
+      more: [
+        "Carbon Neutral 2045",
+        "Electric Vehicles Grid",
+        "Sustainability Policy",
+        "Forest Conservation",
+        "Rhine Water Levels",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Bundesliga",
+        "Bayern Munich",
+        "Borussia Dortmund",
+        "German Football Team",
+        "Olympics Germany",
+      ],
+      more: [
+        "DFB Pokal",
+        "Formula 1 Racing",
+        "Berlin Marathon",
+        "Handball Bundesliga",
+        "Winter Sports",
+      ],
+    },
+    Entertainment: {
+      visible: [
+        "Berlinale Film Festival",
+        "German Cinema",
+        "Netflix Germany",
+        "TV Series Dark",
+        "Cologne Comedy Festival",
+      ],
+      more: [
+        "ARD ZDF",
+        "Reality TV Germany",
+        "Media Awards",
+        "Celebrity News",
+        "Streaming Platforms",
+      ],
+    },
+    "Music & Fashion": {
+      visible: [
+        "Berlin Techno",
+        "Rammstein",
+        "Berlin Fashion Week",
+        "German Designers",
+        "Hugo Boss",
+      ],
+      more: [
+        "Independent Artists",
+        "Music Festivals",
+        "Streetwear Culture",
+        "Adidas Originals",
+        "Luxury Fashion Munich",
+      ],
+    },
+    "Travel & Food": {
+      visible: [
+        "Neuschwanstein Castle",
+        "Brandenburg Gate",
+        "Deutsche Bahn News",
+        "German Bread Culture",
+        "Oktoberfest",
+      ],
+      more: [
+        "Bavarian Alps",
+        "Autobahn Updates",
+        "Black Forest Travel",
+        "Traditional Beer Gardens",
+        "Museum Island Berlin",
+      ],
+    },
+  },
+};
