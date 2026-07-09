@@ -227,4 +227,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "South Korea": {
+    "News & Current Affairs": {
+      visible: [
+        "YTN News",
+        "KBS News",
+        "President of South Korea",
+        "National Assembly Korea",
+        "Seoul News",
+      ],
+      more: [
+        "Yonhap News",
+        "Korean Politics",
+        "Ministry of Foreign Affairs Korea",
+        "North Korea Updates",
+        "Korea Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Heavy Rain Korea",
+        "Typhoon Korea",
+        "Wildfire Korea",
+        "Earthquake Korea",
+        "Emergency Alert Korea",
+      ],
+      more: [
+        "Korea Meteorological Administration",
+        "Flood Warning Korea",
+        "Heatwave Korea",
+        "Fine Dust Alert",
+        "Disaster Response Korea",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Korea",
+        "Squid Game",
+        "K-Drama",
+        "tvN Drama",
+        "Korean Cinema",
+      ],
+      more: [
+        "Disney Plus Korea",
+        "Korean Variety Shows",
+        "Seoul Drama Awards",
+        "CJ ENM",
+        "Korean Actors",
+      ],
+    },
+    Sports: {
+      visible: [
+        "K League",
+        "Son Heung-min",
+        "Korean Baseball",
+        "Korean Volleyball",
+        "Olympic Korea",
+      ],
+      more: [
+        "Tottenham Hotspur",
+        "LPGA Korea",
+        "Taekwondo",
+        "AFC Asian Cup",
+        "Esports Korea",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Samsung",
+        "LG Electronics",
+        "Naver AI",
+        "Kakao AI",
+        "ChatGPT Korea",
+      ],
+      more: [
+        "SK Hynix",
+        "AI Semiconductor",
+        "Robotics Korea",
+        "Smart City Seoul",
+        "Korean Startups",
+      ],
+    },
+    Music: {
+      visible: [
+        "BTS",
+        "BLACKPINK",
+        "NewJeans",
+        "SEVENTEEN",
+        "Spotify Korea",
+      ],
+      more: [
+        "HYBE",
+        "SM Entertainment",
+        "JYP Entertainment",
+        "K-pop Comeback",
+        "MAMA Awards",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Korean Food",
+        "Seoul Fashion Week",
+        "Hanbok",
+        "Korean Beauty",
+        "Jeju Island",
+      ],
+      more: [
+        "K-Beauty",
+        "Korean Street Food",
+        "Cherry Blossom Korea",
+        "Visit Korea",
+        "Korean Culture",
+      ],
+    },
+  },
 };
