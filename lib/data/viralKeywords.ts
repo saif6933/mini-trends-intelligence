@@ -341,4 +341,232 @@ export const viralKeywords = {
       ],
     },
   },
+  "Brazil": {
+    "News & Current Affairs": {
+      visible: [
+        "Globo News",
+        "Brazil News",
+        "President of Brazil",
+        "Brasilia Updates",
+        "Congresso Nacional",
+      ],
+      more: [
+        "G1 News",
+        "Folha de Sao Paulo",
+        "UOL Noticias",
+        "STF Brazil",
+        "Brazil Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Amazon Wildfires",
+        "Floods Brazil",
+        "Heatwave Brazil",
+        "Landslides Brazil",
+        "Civil Defense Brazil",
+      ],
+      more: [
+        "INMET Weather",
+        "Drought Brazil",
+        "Storm Alerts",
+        "Emergency Response Brazil",
+        "Environmental Crisis",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Brazil",
+        "Globo TV",
+        "Brazilian Cinema",
+        "Big Brother Brasil",
+        "Globoplay",
+      ],
+      more: [
+        "Prime Video Brazil",
+        "Brazilian Actors",
+        "TV Globo",
+        "Carnival Brazil",
+        "Streaming Brazil",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Brazil National Team",
+        "Flamengo",
+        "Palmeiras",
+        "Neymar",
+        "Brasileirao",
+      ],
+      more: [
+        "Vinicius Junior",
+        "Copa do Brasil",
+        "Libertadores",
+        "Formula 1 Brazil",
+        "Volleyball Brazil",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Nubank",
+        "Pix Payment",
+        "ChatGPT Brazil",
+        "OpenAI",
+        "Mercado Livre",
+      ],
+      more: [
+        "Brazilian Startups",
+        "AI Brazil",
+        "Fintech Brazil",
+        "Cybersecurity Brazil",
+        "Innovation Brazil",
+      ],
+    },
+    Music: {
+      visible: [
+        "Anitta",
+        "Sertanejo",
+        "Funk Carioca",
+        "Spotify Brazil",
+        "Lollapalooza Brazil",
+      ],
+      more: [
+        "Gusttavo Lima",
+        "Ivete Sangalo",
+        "Rock in Rio",
+        "Brazilian Music",
+        "Samba",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Rio Carnival",
+        "Brazilian Food",
+        "Rio de Janeiro",
+        "Sao Paulo Fashion Week",
+        "Copacabana Beach",
+      ],
+      more: [
+        "Feijoada",
+        "Brazilian Culture",
+        "Iguazu Falls",
+        "Amazon Tourism",
+        "Havaianas",
+      ],
+    },
+  },
+  "Japan": {
+    "News & Current Affairs": {
+      visible: [
+        "NHK News",
+        "Prime Minister Japan",
+        "Tokyo News",
+        "Diet of Japan",
+        "Kyodo News",
+      ],
+      more: [
+        "Yomiuri Shimbun",
+        "Asahi Shimbun",
+        "Japan Elections",
+        "Cabinet Office Japan",
+        "Nikkei Asia",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Earthquake Japan",
+        "Tsunami Warning",
+        "Japan Weather",
+        "Typhoon Japan",
+        "JMA Alerts",
+      ],
+      more: [
+        "Volcano Activity Japan",
+        "Heavy Rain Japan",
+        "Emergency Alert Japan",
+        "Disaster Prevention",
+        "Flood Warnings Japan",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Japan",
+        "Anime News",
+        "Studio Ghibli",
+        "Japanese Cinema",
+        "Crunchyroll",
+      ],
+      more: [
+        "Fuji TV",
+        "TV Asahi",
+        "Live Action Anime",
+        "Voice Actors Japan",
+        "Tokyo Comic Con",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Shohei Ohtani",
+        "J League",
+        "NPB Baseball",
+        "Japan Football",
+        "Sumo Wrestling",
+      ],
+      more: [
+        "Yomiuri Giants",
+        "Samurai Blue",
+        "Formula 1 Japan",
+        "Olympic Japan",
+        "Tokyo Marathon",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Sony",
+        "Nintendo",
+        "SoftBank",
+        "ChatGPT Japan",
+        "AI Japan",
+      ],
+      more: [
+        "Toyota Technology",
+        "Robotics Japan",
+        "Fujitsu",
+        "NEC Corporation",
+        "Semiconductor Japan",
+      ],
+    },
+    Music: {
+      visible: [
+        "J-Pop",
+        "YOASOBI",
+        "Ado",
+        "Kenshi Yonezu",
+        "Spotify Japan",
+      ],
+      more: [
+        "Billboard Japan",
+        "Fuji Rock Festival",
+        "Anime Songs",
+        "Sakura Music",
+        "Japanese Idols",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Cherry Blossom",
+        "Tokyo Fashion",
+        "Kyoto Travel",
+        "Sushi",
+        "Mount Fuji",
+      ],
+      more: [
+        "Onsen",
+        "Japanese Culture",
+        "Matcha",
+        "Shinkansen",
+        "Visit Japan",
+      ],
+    },
+  },
 };
