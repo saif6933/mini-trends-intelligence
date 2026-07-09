@@ -113,4 +113,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "United Kingdom": {
+    "News & Current Affairs": {
+      visible: [
+        "BBC News",
+        "UK Parliament",
+        "Prime Minister UK",
+        "London News",
+        "Sky News",
+      ],
+      more: [
+        "House of Commons",
+        "Royal Family",
+        "The Guardian",
+        "UK General Election",
+        "Westminster",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Met Office Weather",
+        "Flood Warnings UK",
+        "Storm Updates UK",
+        "Heatwave UK",
+        "London Fire Brigade",
+      ],
+      more: [
+        "Emergency Alerts UK",
+        "Coastal Flooding",
+        "Amber Weather Warning",
+        "Snow Disruption",
+        "National Rail Delays",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix UK",
+        "BBC iPlayer",
+        "Love Island UK",
+        "British Cinema",
+        "Doctor Who",
+      ],
+      more: [
+        "ITV",
+        "Channel 4",
+        "BAFTA Awards",
+        "Celebrity News UK",
+        "West End London",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Premier League",
+        "England Football",
+        "Wimbledon",
+        "Formula 1 British GP",
+        "Manchester United",
+      ],
+      more: [
+        "Arsenal",
+        "Liverpool FC",
+        "Cricket England",
+        "Rugby Union",
+        "FA Cup",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "DeepMind",
+        "Google DeepMind",
+        "OpenAI",
+        "ChatGPT",
+        "UK AI",
+      ],
+      more: [
+        "AI Regulation UK",
+        "London Tech Week",
+        "FinTech London",
+        "Cyber Security UK",
+        "British Startups",
+      ],
+    },
+    Music: {
+      visible: [
+        "Adele",
+        "Ed Sheeran",
+        "Dua Lipa",
+        "Spotify UK",
+        "Glastonbury Festival",
+      ],
+      more: [
+        "Coldplay",
+        "BRIT Awards",
+        "BBC Radio 1",
+        "Stormzy",
+        "Sam Fender",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "London Fashion Week",
+        "British Fashion",
+        "UK Travel",
+        "Afternoon Tea",
+        "English Heritage",
+      ],
+      more: [
+        "Royal Events",
+        "British Culture",
+        "Visit Britain",
+        "UK Food Trends",
+        "Sustainable Living UK",
+      ],
+    },
+  },
 };
