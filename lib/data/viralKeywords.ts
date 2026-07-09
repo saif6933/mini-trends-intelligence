@@ -569,4 +569,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "India": {
+    "News & Current Affairs": {
+      visible: [
+        "India Today",
+        "Prime Minister Modi",
+        "Parliament of India",
+        "NDTV News",
+        "Breaking News India",
+      ],
+      more: [
+        "Times of India",
+        "Republic TV",
+        "Election Commission India",
+        "Supreme Court India",
+        "ANI News",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Monsoon India",
+        "Floods India",
+        "Cyclone Updates",
+        "Heatwave India",
+        "Earthquake India",
+      ],
+      more: [
+        "IMD Weather",
+        "NDRF Rescue",
+        "Landslide India",
+        "Heavy Rain Alerts",
+        "Disaster Management India",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Bollywood",
+        "Netflix India",
+        "JioHotstar",
+        "Shah Rukh Khan",
+        "Salman Khan",
+      ],
+      more: [
+        "Prime Video India",
+        "Ranbir Kapoor",
+        "Alia Bhatt",
+        "Indian Cinema",
+        "Box Office India",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Indian Cricket Team",
+        "IPL",
+        "Virat Kohli",
+        "Rohit Sharma",
+        "Jasprit Bumrah",
+      ],
+      more: [
+        "BCCI",
+        "Pro Kabaddi League",
+        "ISL Football",
+        "Neeraj Chopra",
+        "Chess India",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "ChatGPT India",
+        "OpenAI",
+        "Infosys",
+        "Tata Consultancy Services",
+        "Google Gemini",
+      ],
+      more: [
+        "Zoho",
+        "AI India",
+        "Digital India",
+        "Startup India",
+        "Indian Tech Startups",
+      ],
+    },
+    Music: {
+      visible: [
+        "Arijit Singh",
+        "Spotify India",
+        "Bollywood Songs",
+        "Yo Yo Honey Singh",
+        "Shreya Ghoshal",
+      ],
+      more: [
+        "A.R. Rahman",
+        "Diljit Dosanjh",
+        "T-Series",
+        "Indian Idol",
+        "Coke Studio Bharat",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Indian Food",
+        "Diwali",
+        "Holi Festival",
+        "Taj Mahal",
+        "Travel India",
+      ],
+      more: [
+        "Yoga",
+        "Ayurveda",
+        "Incredible India",
+        "Indian Street Food",
+        "Jaipur Tourism",
+      ],
+    },
+  },
 };
