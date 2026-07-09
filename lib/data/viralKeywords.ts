@@ -683,4 +683,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "China": {
+    "News & Current Affairs": {
+      visible: [
+        "Xinhua News",
+        "CCTV News",
+        "People's Daily",
+        "Beijing News",
+        "Xi Jinping",
+      ],
+      more: [
+        "China Daily",
+        "CGTN",
+        "National People's Congress",
+        "State Council China",
+        "Hong Kong News",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "China Floods",
+        "Earthquake China",
+        "Typhoon China",
+        "Heatwave China",
+        "Emergency Alerts China",
+      ],
+      more: [
+        "China Meteorological Administration",
+        "Landslides China",
+        "Wildfires China",
+        "Disaster Relief China",
+        "Heavy Rain China",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Tencent Video",
+        "iQIYI",
+        "Youku",
+        "Chinese Cinema",
+        "C-Drama",
+      ],
+      more: [
+        "Spring Festival Gala",
+        "Box Office China",
+        "Mango TV",
+        "Chinese Celebrities",
+        "Streaming China",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Chinese Super League",
+        "Table Tennis China",
+        "CBA League",
+        "Olympic Team China",
+        "Badminton China",
+      ],
+      more: [
+        "Chinese National Football Team",
+        "Formula 1 China",
+        "Asian Games",
+        "E-Sports China",
+        "Tennis China",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Huawei",
+        "Alibaba",
+        "Tencent",
+        "DeepSeek AI",
+        "Baidu AI",
+      ],
+      more: [
+        "ByteDance",
+        "Xiaomi",
+        "Semiconductor China",
+        "Robotics China",
+        "Artificial Intelligence China",
+      ],
+    },
+    Music: {
+      visible: [
+        "Jay Chou",
+        "Mandopop",
+        "QQ Music",
+        "TME Live",
+        "Douyin Music",
+      ],
+      more: [
+        "G.E.M.",
+        "Chinese Music Charts",
+        "Music Festivals China",
+        "Wang Leehom",
+        "Chinese Idol Shows",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Chinese New Year",
+        "Great Wall of China",
+        "Beijing Travel",
+        "Chinese Cuisine",
+        "Shanghai Fashion",
+      ],
+      more: [
+        "Forbidden City",
+        "Panda Conservation",
+        "Tea Culture",
+        "Domestic Tourism China",
+        "Chinese Culture",
+      ],
+    },
+  },
 };
