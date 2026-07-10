@@ -797,4 +797,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "Germany": {
+    "News & Current Affairs": {
+      visible: [
+        "Tagesschau",
+        "Bundestag",
+        "Chancellor of Germany",
+        "Berlin News",
+        "Deutsche Welle",
+      ],
+      more: [
+        "ZDF News",
+        "ARD News",
+        "Federal Government Germany",
+        "Spiegel Online",
+        "German Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Floods Germany",
+        "Heatwave Germany",
+        "Storm Germany",
+        "Wildfires Germany",
+        "Weather Alerts Germany",
+      ],
+      more: [
+        "DWD Weather",
+        "Rhine Flooding",
+        "Emergency Services Germany",
+        "Climate Alerts",
+        "Civil Protection Germany",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Germany",
+        "Berlinale",
+        "German Cinema",
+        "Prime Video Germany",
+        "German TV",
+      ],
+      more: [
+        "ARD Mediathek",
+        "ZDF Mediathek",
+        "Film Festivals Germany",
+        "Streaming Germany",
+        "German Celebrities",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Bundesliga",
+        "Bayern Munich",
+        "Borussia Dortmund",
+        "Germany National Team",
+        "Formula 1 Germany",
+      ],
+      more: [
+        "DFB Pokal",
+        "UEFA Germany",
+        "Handball Germany",
+        "Berlin Marathon",
+        "Olympic Team Germany",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "SAP",
+        "Siemens",
+        "Aleph Alpha",
+        "ChatGPT Germany",
+        "AI Germany",
+      ],
+      more: [
+        "Bosch Technology",
+        "German Startups",
+        "Industry 4.0",
+        "Robotics Germany",
+        "Cybersecurity Germany",
+      ],
+    },
+    Music: {
+      visible: [
+        "Spotify Germany",
+        "Rammstein",
+        "Helene Fischer",
+        "German Pop Music",
+        "Rock am Ring",
+      ],
+      more: [
+        "Oktoberfest Music",
+        "German Music Charts",
+        "Electronic Music Germany",
+        "Music Festivals Germany",
+        "Classical Music Germany",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Oktoberfest",
+        "Berlin Fashion Week",
+        "German Cuisine",
+        "Neuschwanstein Castle",
+        "Christmas Markets Germany",
+      ],
+      more: [
+        "Black Forest",
+        "German Culture",
+        "Rhine Valley",
+        "Bavarian Traditions",
+        "German Tourism",
+      ],
+    },
+  },
 };
