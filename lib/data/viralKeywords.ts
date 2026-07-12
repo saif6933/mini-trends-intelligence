@@ -1025,4 +1025,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "Canada": {
+    "News & Current Affairs": {
+      visible: [
+        "CBC News",
+        "Prime Minister Canada",
+        "Parliament of Canada",
+        "CTV News",
+        "Toronto News",
+      ],
+      more: [
+        "Global News",
+        "National Post",
+        "The Globe and Mail",
+        "Elections Canada",
+        "Government of Canada",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Canada Wildfires",
+        "Floods Canada",
+        "Winter Storm Canada",
+        "Heatwave Canada",
+        "Weather Alerts Canada",
+      ],
+      more: [
+        "Environment Canada",
+        "Emergency Preparedness Canada",
+        "Air Quality Canada",
+        "Natural Disasters Canada",
+        "Public Safety Canada",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Canada",
+        "TIFF",
+        "Canadian Cinema",
+        "Prime Video Canada",
+        "Bell Media",
+      ],
+      more: [
+        "Crave",
+        "CBC Gem",
+        "Canadian Celebrities",
+        "Streaming Canada",
+        "Film Festivals Canada",
+      ],
+    },
+    Sports: {
+      visible: [
+        "NHL",
+        "Toronto Maple Leafs",
+        "Connor McDavid",
+        "Team Canada Hockey",
+        "Toronto Raptors",
+      ],
+      more: [
+        "CFL",
+        "Canadian Grand Prix",
+        "Canadian Soccer",
+        "Olympic Team Canada",
+        "Vancouver Canucks",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Shopify",
+        "Cohere AI",
+        "ChatGPT Canada",
+        "AI Canada",
+        "Waterloo Tech",
+      ],
+      more: [
+        "Canadian Startups",
+        "Artificial Intelligence Canada",
+        "Quantum Computing Canada",
+        "Cybersecurity Canada",
+        "Innovation Canada",
+      ],
+    },
+    Music: {
+      visible: [
+        "Drake",
+        "The Weeknd",
+        "Spotify Canada",
+        "Justin Bieber",
+        "Canadian Music",
+      ],
+      more: [
+        "Shawn Mendes",
+        "Avril Lavigne",
+        "Canadian Music Charts",
+        "Music Festivals Canada",
+        "JUNO Awards",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Niagara Falls",
+        "Banff National Park",
+        "Toronto Lifestyle",
+        "Canadian Cuisine",
+        "Travel Canada",
+      ],
+      more: [
+        "Canadian Culture",
+        "Vancouver Tourism",
+        "Quebec City",
+        "Maple Syrup",
+        "Northern Lights Canada",
+      ],
+    },
+  },
 };
