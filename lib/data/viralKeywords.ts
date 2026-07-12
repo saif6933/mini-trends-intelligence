@@ -911,4 +911,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "France": {
+    "News & Current Affairs": {
+      visible: [
+        "France 24",
+        "Emmanuel Macron",
+        "Paris News",
+        "National Assembly France",
+        "Le Monde",
+      ],
+      more: [
+        "Le Figaro",
+        "BFM TV",
+        "France Info",
+        "French Government",
+        "French Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Heatwave France",
+        "Floods France",
+        "Wildfires France",
+        "Storm France",
+        "Weather Alerts France",
+      ],
+      more: [
+        "Meteo France",
+        "Emergency Services France",
+        "Civil Protection France",
+        "Climate Alerts France",
+        "Natural Disasters France",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix France",
+        "Cannes Film Festival",
+        "French Cinema",
+        "Canal+",
+        "Disney+ France",
+      ],
+      more: [
+        "French TV",
+        "Prime Video France",
+        "French Celebrities",
+        "Streaming France",
+        "Film Festivals France",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Ligue 1",
+        "Paris Saint-Germain",
+        "Kylian Mbappe",
+        "France National Football Team",
+        "Roland Garros",
+      ],
+      more: [
+        "Tour de France",
+        "Formula 1 France",
+        "Rugby France",
+        "Olympic Team France",
+        "French Open",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Mistral AI",
+        "Station F",
+        "ChatGPT France",
+        "AI France",
+        "Orange France",
+      ],
+      more: [
+        "Dassault Systemes",
+        "French Startups",
+        "Cybersecurity France",
+        "Robotics France",
+        "Artificial Intelligence France",
+      ],
+    },
+    Music: {
+      visible: [
+        "Spotify France",
+        "French Pop",
+        "Aya Nakamura",
+        "DJ Snake",
+        "Music France",
+      ],
+      more: [
+        "French Music Charts",
+        "Music Festivals France",
+        "Cannes Music Events",
+        "Electronic Music France",
+        "Francophone Music",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Eiffel Tower",
+        "Paris Fashion Week",
+        "French Cuisine",
+        "Louvre Museum",
+        "Travel France",
+      ],
+      more: [
+        "French Culture",
+        "Provence",
+        "French Riviera",
+        "Wine Tourism France",
+        "Luxury Brands France",
+      ],
+    },
+  },
 };
