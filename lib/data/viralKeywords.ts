@@ -1367,4 +1367,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "Indonesia": {
+    "News & Current Affairs": {
+      visible: [
+        "Kompas",
+        "Detik News",
+        "President Indonesia",
+        "Jakarta News",
+        "CNN Indonesia",
+      ],
+      more: [
+        "Antara News",
+        "Tempo",
+        "Metro TV Indonesia",
+        "Government of Indonesia",
+        "Indonesian Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Earthquake Indonesia",
+        "Volcanic Eruption",
+        "Floods Indonesia",
+        "Tsunami Warning",
+        "Weather Alerts Indonesia",
+      ],
+      more: [
+        "BMKG",
+        "Mount Merapi",
+        "Forest Fires Indonesia",
+        "Disaster Relief Indonesia",
+        "Emergency Response Indonesia",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Indonesia",
+        "Indonesian Cinema",
+        "Vidio",
+        "Indonesian TV",
+        "Disney+ Hotstar Indonesia",
+      ],
+      more: [
+        "WeTV Indonesia",
+        "Prime Video Indonesia",
+        "Indonesian Celebrities",
+        "Streaming Indonesia",
+        "Film Festivals Indonesia",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Indonesia National Football Team",
+        "Liga 1 Indonesia",
+        "Badminton Indonesia",
+        "MotoGP Indonesia",
+        "SEA Games Indonesia",
+      ],
+      more: [
+        "Persija Jakarta",
+        "PSSI",
+        "Thomas Cup",
+        "Olympic Team Indonesia",
+        "Asian Games",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "GoTo",
+        "Tokopedia",
+        "ChatGPT Indonesia",
+        "AI Indonesia",
+        "Traveloka",
+      ],
+      more: [
+        "Bukalapak",
+        "Indonesian Startups",
+        "Artificial Intelligence Indonesia",
+        "Cybersecurity Indonesia",
+        "Digital Indonesia",
+      ],
+    },
+    Music: {
+      visible: [
+        "Spotify Indonesia",
+        "Indonesian Pop",
+        "Raisa",
+        "Noah Band",
+        "Indonesian Music",
+      ],
+      more: [
+        "Indonesian Music Charts",
+        "Dangdut Music",
+        "Music Festivals Indonesia",
+        "Tulus",
+        "Pamungkas",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Bali Tourism",
+        "Indonesian Cuisine",
+        "Jakarta Lifestyle",
+        "Travel Indonesia",
+        "Komodo Island",
+      ],
+      more: [
+        "Borobudur Temple",
+        "Indonesian Culture",
+        "Yogyakarta Tourism",
+        "Batik Indonesia",
+        "Lombok Tourism",
+      ],
+    },
+  },
 };
