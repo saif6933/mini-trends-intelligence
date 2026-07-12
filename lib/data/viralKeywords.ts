@@ -1139,4 +1139,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "Australia": {
+    "News & Current Affairs": {
+      visible: [
+        "ABC News Australia",
+        "Prime Minister Australia",
+        "Anthony Albanese",
+        "Sydney News",
+        "Sky News Australia",
+      ],
+      more: [
+        "The Sydney Morning Herald",
+        "9News",
+        "7News",
+        "Australian Elections",
+        "Federal Government Australia",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Bushfires Australia",
+        "Floods Australia",
+        "Heatwave Australia",
+        "Cyclone Alert Australia",
+        "Weather Warnings Australia",
+      ],
+      more: [
+        "BOM Weather",
+        "SES Emergency",
+        "Rural Fire Service",
+        "Climate Alerts Australia",
+        "Emergency Management Australia",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Australia",
+        "Stan Streaming",
+        "Australian Cinema",
+        "ABC iview",
+        "Logie Awards",
+      ],
+      more: [
+        "Binge",
+        "Prime Video Australia",
+        "Australian Celebrities",
+        "Sydney Film Festival",
+        "Foxtel",
+      ],
+    },
+    Sports: {
+      visible: [
+        "AFL",
+        "NRL",
+        "Australian Cricket Team",
+        "Australian Open",
+        "Wallabies Rugby",
+      ],
+      more: [
+        "Matildas Football",
+        "Socceroos",
+        "Formula 1 Australian GP",
+        "Melbourne Cup",
+        "Olympic Team Australia",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "Canva",
+        "Atlassian",
+        "ChatGPT Australia",
+        "AI Australia",
+        "Tech Central Sydney",
+      ],
+      more: [
+        "Australian Startups",
+        "Artificial Intelligence Australia",
+        "Cybersecurity Australia",
+        "Robotics Australia",
+        "CSIRO Tech",
+      ],
+    },
+    Music: {
+      visible: [
+        "Spotify Australia",
+        "ARIA Awards",
+        "Troye Sivan",
+        "The Kid LAROI",
+        "Australian Music",
+      ],
+      more: [
+        "Triple J",
+        "Australian Music Charts",
+        "Music Festivals Australia",
+        "Kylie Minogue",
+        "Electronic Music Australia",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Sydney Opera House",
+        "Great Barrier Reef",
+        "Australian Cuisine",
+        "Travel Australia",
+        "Bondi Beach",
+      ],
+      more: [
+        "Uluru",
+        "Melbourne Lifestyle",
+        "Australian Culture",
+        "Gold Coast Tourism",
+        "Outback Australia",
+      ],
+    },
+  },
 };
