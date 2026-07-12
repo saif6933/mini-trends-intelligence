@@ -1481,4 +1481,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "Mexico": {
+    "News & Current Affairs": {
+      visible: [
+        "President of Mexico",
+        "Mexico News",
+        "El Universal",
+        "Milenio",
+        "Reforma",
+      ],
+      more: [
+        "Excélsior",
+        "Televisa Noticias",
+        "TV Azteca Noticias",
+        "Government of Mexico",
+        "Mexican Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Earthquake Mexico",
+        "Hurricane Mexico",
+        "Floods Mexico",
+        "Weather Alerts Mexico",
+        "Volcanic Activity Mexico",
+      ],
+      more: [
+        "National Civil Protection",
+        "Popocatépetl Volcano",
+        "Emergency Mexico",
+        "Tropical Storm Mexico",
+        "Natural Disasters Mexico",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Mexico",
+        "Mexican Cinema",
+        "Televisa",
+        "Prime Video Mexico",
+        "Mexican TV",
+      ],
+      more: [
+        "ViX",
+        "Streaming Mexico",
+        "Mexican Celebrities",
+        "Film Festivals Mexico",
+        "Disney+ Mexico",
+      ],
+    },
+    Sports: {
+      visible: [
+        "Liga MX",
+        "Club América",
+        "Chivas Guadalajara",
+        "Mexico National Football Team",
+        "Canelo Álvarez",
+      ],
+      more: [
+        "Cruz Azul",
+        "Pumas UNAM",
+        "Formula 1 Mexico",
+        "Sergio Pérez",
+        "Olympic Team Mexico",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "ChatGPT Mexico",
+        "AI Mexico",
+        "Mercado Libre Mexico",
+        "Mexican Startups",
+        "Digital Mexico",
+      ],
+      more: [
+        "Artificial Intelligence Mexico",
+        "FinTech Mexico",
+        "Cybersecurity Mexico",
+        "Innovation Mexico",
+        "Technology Mexico",
+      ],
+    },
+    Music: {
+      visible: [
+        "Spotify Mexico",
+        "Peso Pluma",
+        "Luis Miguel",
+        "Regional Mexican Music",
+        "Mexican Music",
+      ],
+      more: [
+        "Grupo Frontera",
+        "Carin León",
+        "Música Latina",
+        "Music Festivals Mexico",
+        "Mexican Music Charts",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Mexico City",
+        "Mexican Cuisine",
+        "Travel Mexico",
+        "Cancún",
+        "Día de los Muertos",
+      ],
+      more: [
+        "Chichén Itzá",
+        "Tulum",
+        "Mexican Culture",
+        "Guadalajara Tourism",
+        "Oaxaca Cuisine",
+      ],
+    },
+  },
 };
