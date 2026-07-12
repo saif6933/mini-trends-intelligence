@@ -1253,4 +1253,118 @@ export const viralKeywords = {
       ],
     },
   },
+  "Spain": {
+    "News & Current Affairs": {
+      visible: [
+        "RTVE News",
+        "Prime Minister Spain",
+        "Spanish Parliament",
+        "Madrid News",
+        "El País",
+      ],
+      more: [
+        "La Vanguardia",
+        "Antena 3 Noticias",
+        "El Mundo",
+        "Government of Spain",
+        "Spanish Elections",
+      ],
+    },
+    "Disasters & Emergencies": {
+      visible: [
+        "Wildfires Spain",
+        "Heatwave Spain",
+        "Floods Spain",
+        "Weather Alerts Spain",
+        "Earthquake Spain",
+      ],
+      more: [
+        "AEMET Weather",
+        "Civil Protection Spain",
+        "Drought Spain",
+        "Emergency Services Spain",
+        "Natural Disasters Spain",
+      ],
+    },
+    "Entertainment": {
+      visible: [
+        "Netflix Spain",
+        "Spanish Cinema",
+        "Prime Video Spain",
+        "La Casa de Papel",
+        "Spanish TV",
+      ],
+      more: [
+        "Movistar Plus+",
+        "Spanish Celebrities",
+        "Streaming Spain",
+        "Film Festivals Spain",
+        "San Sebastián Film Festival",
+      ],
+    },
+    Sports: {
+      visible: [
+        "La Liga",
+        "Real Madrid",
+        "FC Barcelona",
+        "Spain National Football Team",
+        "Carlos Alcaraz",
+      ],
+      more: [
+        "Copa do Rey",
+        "Formula 1 Spain",
+        "Rafael Nadal",
+        "MotoGP Spain",
+        "Athletic Bilbao",
+      ],
+    },
+    "Tech & AI": {
+      visible: [
+        "ChatGPT Spain",
+        "AI Spain",
+        "Telefónica Tech",
+        "Spanish Startups",
+        "Barcelona Tech",
+      ],
+      more: [
+        "Artificial Intelligence Spain",
+        "Cybersecurity Spain",
+        "Mobile World Congress",
+        "FinTech Spain",
+        "Innovation Spain",
+      ],
+    },
+    Music: {
+      visible: [
+        "Spotify Spain",
+        "Rosalía",
+        "Spanish Music",
+        "Enrique Iglesias",
+        "Latin Pop Spain",
+      ],
+      more: [
+        "Aitana",
+        "Music Festivals Spain",
+        "Spanish Music Charts",
+        "Flamenco Music",
+        "Alejandro Sanz",
+      ],
+    },
+    "Lifestyle & Culture": {
+      visible: [
+        "Sagrada Familia",
+        "Barcelona Tourism",
+        "Spanish Cuisine",
+        "Travel Spain",
+        "Madrid Lifestyle",
+      ],
+      more: [
+        "Ibiza",
+        "Flamenco Culture",
+        "Costa del Sol",
+        "Spanish Culture",
+        "Running of the Bulls",
+      ],
+    },
+  },
 };
