@@ -58,7 +58,50 @@ interface DuplicateInfo {
   categories: Set<string>;
   sources: Set<"trend" | "viral">;
 }
+interface CanonicalAlias {
+  canonical: string;
+  aliases: string[];
+}
+const CANONICAL_ALIASES: CanonicalAlias[] = [
 
+  {
+    canonical: "Artificial Intelligence",
+    aliases: [
+      "AI",
+      "Artificial Intelligence",
+      "A.I.",
+    ],
+  },
+
+  {
+    canonical: "ChatGPT",
+    aliases: [
+      "Chat GPT",
+      "ChatGPT",
+      "chat-gpt",
+    ],
+  },
+
+  {
+    canonical: "OpenAI",
+    aliases: [
+      "Open AI",
+      "OpenAI",
+      "open-ai",
+    ],
+  },
+
+  {
+    canonical: "United States",
+    aliases: [
+      "US",
+      "USA",
+      "United States",
+      "United States of America",
+    ],
+  },
+
+];
 
 // ----------------------------------------------------------
 // Configuration
@@ -86,11 +129,33 @@ function normalizeKeyword(
     return "";
   }
 
-
-  return keyword
+  const normalized = keyword
     .trim()
-    .toLowerCase()
     .replace(/\s+/g, " ");
+
+  const lower =
+    normalized.toLowerCase();
+
+  for (const alias of CANONICAL_ALIASES) {
+
+    for (const value of alias.aliases) {
+
+      if (
+        lower ===
+        value.toLowerCase()
+      ) {
+
+        return alias.canonical
+          .trim()
+          .toLowerCase();
+
+      }
+
+    }
+
+  }
+
+  return lower;
 
 }
 
