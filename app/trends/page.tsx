@@ -20,7 +20,7 @@ export default function TrendsPage() {
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-       <h1>🌍 Trends Intelligence</h1>
+       npm run dev
 
         <p style={styles.subtitle}>
           Real-time country trend ranking and category intelligence
