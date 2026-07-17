@@ -35,6 +35,7 @@ interface KeywordRecord {
   canonical: string;
   category: string;
   source: "trend" | "viral";
+  country: string;
 }
 
 
@@ -92,18 +93,16 @@ function normalizeKeyword(
 function registerKeyword(
   keyword: string,
   category: string,
-  source: "trend" | "viral"
+  source: "trend" | "viral",
+  country: string
 ): void {
-
 
   const normalized =
     normalizeKeyword(keyword);
 
-
   if (!normalized) {
     return;
   }
-
 
   keywordRegistry.push({
 
@@ -111,14 +110,13 @@ function registerKeyword(
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, ""),
 
-
     canonical: keyword.trim(),
-
 
     category,
 
-
     source,
+
+    country,
 
   });
 
@@ -130,9 +128,9 @@ function registerKeyword(
 function extractCategoryKeywords(
   categoryName: string,
   categoryData: KeywordCategory,
-  source: "trend" | "viral"
+  source: "trend" | "viral",
+  country: string
 ): void {
-
 
   const keywords = [
 
@@ -142,22 +140,18 @@ function extractCategoryKeywords(
 
   ];
 
-
-
   for (const keyword of keywords) {
-
 
     registerKeyword(
       keyword,
       categoryName,
-      source
+      source,
+      country
     );
-
 
   }
 
 }
-
 
 // ----------------------------------------------------------
 // Extract Trend Keywords
@@ -201,15 +195,12 @@ function extractTrendKeywords(): void {
 
 
 
-      extractCategoryKeywords(
-
-        categoryName,
-
-        categoryData as KeywordCategory,
-
-        "trend"
-
-      );
+     extractCategoryKeywords(
+  categoryName,
+  categoryData as KeywordCategory,
+  "trend",
+  countryName
+);
 
 
     }
@@ -264,15 +255,12 @@ function extractViralKeywords(): void {
 
 
 
-      extractCategoryKeywords(
-
-        categoryName,
-
-        categoryData as KeywordCategory,
-
-        "viral"
-
-      );
+     extractCategoryKeywords(
+  categoryName,
+  categoryData as KeywordCategory,
+  "viral",
+  countryName
+);
 
 
     }
