@@ -49,6 +49,15 @@ interface VerificationResult {
 
   sources: string[];
 }
+interface DuplicateInfo {
+  id: string;
+  canonical: string;
+  count: number;
+
+  countries: Set<string>;
+  categories: Set<string>;
+  sources: Set<"trend" | "viral">;
+}
 
 
 // ----------------------------------------------------------
@@ -498,79 +507,159 @@ function printSection(
 
 
 // ----------------------------------------------------------
-// Duplicate Check
+// Duplicate Intelligence Report
 // ----------------------------------------------------------
 
 function checkDuplicates() {
 
-
-  const ids =
-    new Set<string>();
-
-
-  const canonicals =
-    new Set<string>();
-
-
-  let duplicateIds = 0;
-
-  let duplicateCanonicals = 0;
-
+  const duplicateMap =
+    new Map<string, DuplicateInfo>();
 
 
   for (const keyword of keywordRegistry) {
 
+    const existing =
+      duplicateMap.get(keyword.id);
 
-    if (
-      ids.has(keyword.id)
-    ) {
+    if (existing) {
 
-      duplicateIds++;
+      existing.count++;
 
-      console.log(
-        `Duplicate ID: ${keyword.id}`
+      existing.countries.add(
+        keyword.country
       );
+
+      existing.categories.add(
+        keyword.category
+      );
+
+      existing.sources.add(
+        keyword.source
+      );
+
+      continue;
 
     }
 
+    duplicateMap.set(
+      keyword.id,
+      {
+        id: keyword.id,
 
-    ids.add(keyword.id);
+        canonical: keyword.canonical,
 
+        count: 1,
 
+        countries: new Set([
+          keyword.country,
+        ]),
 
-    const canonical =
-      normalizeKeyword(
-        keyword.canonical
-      );
+        categories: new Set([
+          keyword.category,
+        ]),
 
-
-
-    if (
-      canonicals.has(canonical)
-    ) {
-
-      duplicateCanonicals++;
-
-      console.log(
-        `Duplicate Canonical: ${keyword.canonical}`
-      );
-
-    }
-
-
-
-    canonicals.add(canonical);
-
+        sources: new Set([
+          keyword.source,
+        ]),
+      }
+    );
 
   }
+   const duplicates =
+    Array.from(duplicateMap.values())
+      .filter(
+        (item) => item.count > 1
+      );
 
+  console.log("");
 
+  console.log(
+    "=================================================="
+  );
 
-  return {
+  console.log(
+    "DUPLICATE INTELLIGENCE REPORT"
+  );
 
-    duplicateIds,
+  console.log(
+    "=================================================="
+  );
 
-    duplicateCanonicals,
+  if (duplicates.length === 0) {
+
+    console.log(
+      "No duplicate keywords found."
+    );
+
+  }
+  else {
+
+    for (const item of duplicates) {
+
+      console.log("");
+
+      console.log(
+        `Keyword : ${item.canonical}`
+      );
+
+      console.log(
+        `ID      : ${item.id}`
+      );
+
+      console.log(
+        `Count   : ${item.count}`
+      );
+
+      console.log("");
+
+      console.log("Countries");
+
+      console.log("---------");
+
+      for (const country of item.countries) {
+
+        console.log(country);
+
+      }
+
+      console.log("");
+
+      console.log("Categories");
+
+      console.log("----------");
+
+      for (const category of item.categories) {
+
+        console.log(category);
+
+      }
+
+      console.log("");
+
+      console.log("Sources");
+
+      console.log("-------");
+
+      for (const source of item.sources) {
+
+        console.log(source);
+
+      }
+
+      console.log("");
+
+      console.log(
+        "--------------------------------------------------"
+      );
+
+    }
+
+  }
+    return {
+
+    duplicateIds: duplicates.length,
+
+    duplicateCanonicals: duplicates.length,
 
   };
 
