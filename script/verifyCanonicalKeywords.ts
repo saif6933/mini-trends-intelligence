@@ -19,6 +19,9 @@ import {
   viralKeywords,
 } from "../lib/data/viralKeywords";
 
+import {
+  CANONICAL_ALIASES,
+} from "../lib/data/canonicalAliases";
 
 // ----------------------------------------------------------
 // Types & Interfaces
@@ -58,50 +61,7 @@ interface DuplicateInfo {
   categories: Set<string>;
   sources: Set<"trend" | "viral">;
 }
-interface CanonicalAlias {
-  canonical: string;
-  aliases: string[];
-}
-const CANONICAL_ALIASES: CanonicalAlias[] = [
 
-  {
-    canonical: "Artificial Intelligence",
-    aliases: [
-      "AI",
-      "Artificial Intelligence",
-      "A.I.",
-    ],
-  },
-
-  {
-    canonical: "ChatGPT",
-    aliases: [
-      "Chat GPT",
-      "ChatGPT",
-      "chat-gpt",
-    ],
-  },
-
-  {
-    canonical: "OpenAI",
-    aliases: [
-      "Open AI",
-      "OpenAI",
-      "open-ai",
-    ],
-  },
-
-  {
-    canonical: "United States",
-    aliases: [
-      "US",
-      "USA",
-      "United States",
-      "United States of America",
-    ],
-  },
-
-];
 
 // ----------------------------------------------------------
 // Configuration
@@ -130,20 +90,44 @@ function normalizeKeyword(
   }
 
   const normalized = keyword
-    .trim()
-    .replace(/\s+/g, " ");
 
-  const lower =
-    normalized.toLowerCase();
+    .normalize("NFD")
+
+    .replace(/[\u0300-\u036f]/g, "")
+
+    .replace(/[_-]+/g, " ")
+
+    .replace(/[^\w\s]/g, " ")
+
+    .replace(/\s+/g, " ")
+
+    .trim()
+
+    .toLowerCase();
+
 
   for (const alias of CANONICAL_ALIASES) {
 
     for (const value of alias.aliases) {
 
-      if (
-        lower ===
-        value.toLowerCase()
-      ) {
+      const aliasValue = value
+
+        .normalize("NFD")
+
+        .replace(/[\u0300-\u036f]/g, "")
+
+        .replace(/[_-]+/g, " ")
+
+        .replace(/[^\w\s]/g, " ")
+
+        .replace(/\s+/g, " ")
+
+        .trim()
+
+        .toLowerCase();
+
+
+      if (normalized === aliasValue) {
 
         return alias.canonical
           .trim()
@@ -155,10 +139,9 @@ function normalizeKeyword(
 
   }
 
-  return lower;
+  return normalized;
 
 }
-
 
 // ----------------------------------------------------------
 // Register Keyword
@@ -857,3 +840,255 @@ function main(): void {
 // ----------------------------------------------------------
 
 main();
+console.log("=================================");
+console.log("SPORTS NORMALIZATION TEST");
+console.log("=================================");
+
+const sportsTestKeywords = [
+  "EPL",
+  "English Premier League",
+  "UCL",
+  "Champions League",
+  "FIFA WC",
+  "IPL",
+  "NBA",
+  "F1",
+];
+
+for (const keyword of sportsTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("ALIAS COVERAGE TEST");
+console.log("=================================");
+
+let aliasMatches = 0;
+
+for (const keyword of keywordRegistry) {
+
+  const normalized = normalizeKeyword(keyword.id);
+
+  if (normalized !== keyword.id.toLowerCase()) {
+    aliasMatches++;
+  }
+
+}
+
+console.log(
+  "Total Keywords:",
+  keywordRegistry.length
+);
+
+console.log(
+  "Alias Matches:",
+  aliasMatches
+);
+console.log("=================================");
+console.log("CANONICAL ALIAS MATCH TEST");
+console.log("=================================");
+
+let canonicalAliasMatches = 0;
+
+for (const keyword of keywordRegistry) {
+
+  const original =
+    keyword.id
+      .toLowerCase()
+      .trim();
+
+  const normalized =
+    normalizeKeyword(keyword.id);
+
+  for (const alias of CANONICAL_ALIASES) {
+
+    const canonical =
+      alias.canonical
+        .toLowerCase()
+        .trim();
+
+    if (
+      normalized === canonical &&
+      original !== canonical
+    ) {
+      canonicalAliasMatches++;
+      break;
+    }
+
+  }
+
+}
+
+console.log(
+  "Canonical Alias Matches:",
+  canonicalAliasMatches
+);
+console.log("=================================");
+console.log("POLITICS NORMALIZATION TEST");
+console.log("=================================");
+
+const politicsTestKeywords = [
+  "Trump",
+  "President Trump",
+  "Biden",
+  "PM Modi",
+  "President Xi",
+  "Putin",
+  "Zelensky",
+  "Macron",
+  "Starmer",
+  "UN",
+  "EU",
+  "North Atlantic Treaty Organization",
+];
+
+for (const keyword of politicsTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("TECH NORMALIZATION TEST");
+console.log("=================================");
+
+const techTestKeywords = [
+  "Google Search",
+  "MSFT",
+  "Apple Inc.",
+  "Facebook",
+  "Amazon.com",
+  "Open AI",
+  "Claude AI",
+  "Nvidia",
+  "Tesla Motors",
+  "Space Exploration Technologies",
+];
+
+for (const keyword of techTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("SOCIAL PLATFORMS NORMALIZATION TEST");
+console.log("=================================");
+
+const socialTestKeywords = [
+  "YT",
+  "FB",
+  "Insta",
+  "IG",
+  "Twitter",
+  "X.com",
+  "Tik Tok",
+  "WA",
+  "TG",
+  "Linked In",
+];
+
+for (const keyword of socialTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("ENTERTAINMENT NORMALIZATION TEST");
+console.log("=================================");
+
+const entertainmentTestKeywords = [
+  "Netflix Inc.",
+  "The Walt Disney Company",
+  "Marvel Studios",
+  "DC Comics",
+  "Spotify Music",
+  "Apple Music",
+  "Amazon Prime Video",
+  "Max",
+  "Disney Plus",
+  "Crunchyroll",
+];
+
+for (const keyword of entertainmentTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("ORGANIZATIONS NORMALIZATION TEST");
+console.log("=================================");
+
+const organizationTestKeywords = [
+  "WHO",
+  "IMF",
+  "WB",
+  "WTO",
+  "International Criminal Police Organization",
+  "United Nations Educational, Scientific and Cultural Organization",
+  "United Nations Children's Fund",
+];
+
+for (const keyword of organizationTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("ECONOMY & FINANCE NORMALIZATION TEST");
+console.log("=================================");
+
+const financeTestKeywords = [
+  "SP500",
+  "Nasdaq Composite",
+  "DJIA",
+  "BTC",
+  "ETH",
+  "USD",
+  "EUR",
+  "XAU",
+  "WTI",
+  "Fed",
+];
+
+for (const keyword of financeTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
+console.log("=================================");
+console.log("SCIENCE & SPACE NORMALIZATION TEST");
+console.log("=================================");
+
+const scienceTestKeywords = [
+  "National Aeronautics and Space Administration",
+  "European Space Agency",
+  "Indian Space Research Organization",
+  "Blue Origin",
+  "JWST",
+  "Hubble",
+  "NASA Artemis",
+  "ISS",
+  "European Organization for Nuclear Research",
+];
+
+for (const keyword of scienceTestKeywords) {
+  console.log(
+    keyword,
+    "=>",
+    normalizeKeyword(keyword)
+  );
+}
