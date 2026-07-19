@@ -61,7 +61,15 @@ interface DuplicateInfo {
   categories: Set<string>;
   sources: Set<"trend" | "viral">;
 }
+interface CanonicalDuplicateInfo {
+  canonical: string;
+  count: number;
 
+  ids: Set<string>;
+  countries: Set<string>;
+  categories: Set<string>;
+  sources: Set<"trend" | "viral">;
+}
 
 // ----------------------------------------------------------
 // Configuration
@@ -559,15 +567,21 @@ function printSection(
 // ----------------------------------------------------------
 
 function checkDuplicates() {
+  console.log(">>> checkDuplicates() started <<<");
 
   const duplicateMap =
     new Map<string, DuplicateInfo>();
 
+  const canonicalMap =
+    new Map<string, CanonicalDuplicateInfo>();
+
 
   for (const keyword of keywordRegistry) {
 
+
     const existing =
       duplicateMap.get(keyword.id);
+
 
     if (existing) {
 
@@ -585,261 +599,274 @@ function checkDuplicates() {
         keyword.source
       );
 
-      continue;
+    }
+    else {
+
+      duplicateMap.set(
+        keyword.id,
+        {
+          id: keyword.id,
+
+          canonical: keyword.canonical,
+
+          count: 1,
+
+          countries: new Set([
+            keyword.country,
+          ]),
+
+          categories: new Set([
+            keyword.category,
+          ]),
+
+          sources: new Set([
+            keyword.source,
+          ]),
+        }
+      );
 
     }
 
-    duplicateMap.set(
-      keyword.id,
-      {
-        id: keyword.id,
 
-        canonical: keyword.canonical,
+    const canonicalKey =
+      keyword.canonical
+        .trim()
+        .toLowerCase();
 
-        count: 1,
 
-        countries: new Set([
-          keyword.country,
-        ]),
+    const existingCanonical =
+      canonicalMap.get(canonicalKey);
 
-        categories: new Set([
-          keyword.category,
-        ]),
 
-        sources: new Set([
-          keyword.source,
-        ]),
-      }
-    );
+    if (existingCanonical) {
+
+      existingCanonical.count++;
+
+      existingCanonical.ids.add(
+        keyword.id
+      );
+
+      existingCanonical.countries.add(
+        keyword.country
+      );
+
+      existingCanonical.categories.add(
+        keyword.category
+      );
+
+      existingCanonical.sources.add(
+        keyword.source
+      );
+
+    }
+    else {
+
+      canonicalMap.set(
+        canonicalKey,
+        {
+          canonical: keyword.canonical,
+
+          count: 1,
+
+          ids: new Set([
+            keyword.id,
+          ]),
+
+          countries: new Set([
+            keyword.country,
+          ]),
+
+          categories: new Set([
+            keyword.category,
+          ]),
+
+          sources: new Set([
+            keyword.source,
+          ]),
+        }
+      );
+
+    }
 
   }
-   const duplicates =
+
+
+  const duplicates =
     Array.from(duplicateMap.values())
       .filter(
         (item) => item.count > 1
       );
 
+
+  const canonicalDuplicates =
+    Array.from(canonicalMap.values())
+      .filter(
+        (item) => item.count > 1
+      );
+      const trueDuplicates =
+      
+  canonicalDuplicates.filter(
+    (item) =>
+      item.countries.size === 1 &&
+      item.categories.size === 1 &&
+      item.sources.size === 1
+  );
+
+
+const intentionalDuplicates =
+  canonicalDuplicates.filter(
+    (item) =>
+      item.countries.size > 1 ||
+      item.categories.size > 1 ||
+      item.sources.size > 1
+  );
+
+
+console.log("");
+
+console.log("==================================================");
+console.log("DUPLICATE CLASSIFICATION");
+console.log("==================================================");
+
+
+console.log(
+  `True Duplicates       : ${trueDuplicates.length}`
+);
+
+console.log(
+  `Intentional Duplicates: ${intentionalDuplicates.length}`
+);
+console.log("");
+
+console.log(
+  "=================================================="
+);
+
+console.log(
+  "DUPLICATE CANONICAL DETAILS"
+);
+
+console.log(
+  "=================================================="
+);
+
+
+for (const item of canonicalDuplicates) {
+  
+
   console.log("");
 
   console.log(
-    "=================================================="
+    `Canonical : ${item.canonical}`
   );
 
   console.log(
-    "DUPLICATE INTELLIGENCE REPORT"
+    `Count     : ${item.count}`
   );
 
   console.log(
-    "=================================================="
+    "IDs:"
   );
 
-  if (duplicates.length === 0) {
-
+  for (const id of item.ids) {
     console.log(
-      "No duplicate keywords found."
+      " - " + id
     );
-
   }
-  else {
+  console.log("");
 
-    for (const item of duplicates) {
+console.log("Countries:");
 
-      console.log("");
+for (const country of item.countries) {
+  console.log(" - " + country);
+}
 
-      console.log(
-        `Keyword : ${item.canonical}`
-      );
+console.log("");
 
-      console.log(
-        `ID      : ${item.id}`
-      );
+console.log("Categories:");
 
-      console.log(
-        `Count   : ${item.count}`
-      );
+for (const category of item.categories) {
+  console.log(" - " + category);
+}
 
-      console.log("");
+console.log("");
 
-      console.log("Countries");
+console.log("Sources:");
 
-      console.log("---------");
+for (const source of item.sources) {
+  console.log(" - " + source);
+}
 
-      for (const country of item.countries) {
+}
+console.log("");
 
-        console.log(country);
+console.log(
+  "=================================================="
+);
 
-      }
 
-      console.log("");
-
-      console.log("Categories");
-
-      console.log("----------");
-
-      for (const category of item.categories) {
-
-        console.log(category);
-
-      }
-
-      console.log("");
-
-      console.log("Sources");
-
-      console.log("-------");
-
-      for (const source of item.sources) {
-
-        console.log(source);
-
-      }
-
-      console.log("");
-
-      console.log(
-        "--------------------------------------------------"
-      );
-
-    }
-
-  }
-    return {
-
+   return {
     duplicateIds: duplicates.length,
-
-    duplicateCanonicals: duplicates.length,
-
+    duplicateCanonicals: canonicalDuplicates.length,
+    trueDuplicates: trueDuplicates.length,
+    intentionalDuplicates: intentionalDuplicates.length,
   };
 
 }
-
+  
 
 // ----------------------------------------------------------
-// Main
+// Execute
 // ----------------------------------------------------------
-
 function main(): void {
 
-
   console.clear();
-
-
-  console.log("");
-
-  console.log(
-    "==============================================="
-  );
-
-  console.log(
-    " Mini Trends Intelligence System"
-  );
-
-  console.log(
-    " Canonical Keyword Verification Engine v2.0"
-  );
-
-  console.log(
-    "==============================================="
-  );
-
-
 
   const results =
     verifyCanonicalKeywords();
 
-
-
   const grouped =
     groupResults(results);
 
-
-
   const duplicates =
     checkDuplicates();
-
-
-
-  printSection(
-    "VERIFIED (2+ Sources)",
-    grouped.verified
-  );
-
-
-  printSection(
-    "PARTIAL (1 Source)",
-    grouped.partial
-  );
-
-
-  printSection(
-    "MISSING",
-    grouped.missing
-  );
-
-
-
-  console.log("");
-
-  console.log(
-    "==============================================="
-  );
-
-  console.log(
-    "SUMMARY"
-  );
-
-  console.log(
-    "==============================================="
-  );
-
 
 
   console.log(
     `Total Keywords      : ${results.length}`
   );
 
-
   console.log(
     `Verified            : ${grouped.verified.length}`
   );
-
 
   console.log(
     `Partial             : ${grouped.partial.length}`
   );
 
-
   console.log(
     `Missing             : ${grouped.missing.length}`
   );
-
 
   console.log(
     `Duplicate IDs       : ${duplicates.duplicateIds}`
   );
 
-
   console.log(
     `Duplicate Canonical : ${duplicates.duplicateCanonicals}`
   );
 
-
-
-  console.log("");
-
   console.log(
-    "Verification Complete."
+    `True Duplicates       : ${duplicates.trueDuplicates}`
   );
 
+  console.log(
+    `Intentional Duplicates: ${duplicates.intentionalDuplicates}`
+  );
 
 }
 
 
-// ----------------------------------------------------------
-// Execute
-// ----------------------------------------------------------
-
-main();
 console.log("=================================");
 console.log("SPORTS NORMALIZATION TEST");
 console.log("=================================");
@@ -1092,3 +1119,4 @@ for (const keyword of scienceTestKeywords) {
     normalizeKeyword(keyword)
   );
 }
+main();
