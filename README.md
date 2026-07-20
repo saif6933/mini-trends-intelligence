@@ -360,10 +360,49 @@ Development: Daily Continuous Progress
 | Phase 11 | ⏳ Planned      | Insights Intelligence Engine (Predictions, Rankings, Country Comparison, eCPM Intelligence) |
 | Phase 12 | ⏳ Planned      | AI Content Intelligence Engine + Real Data Integration + Central Intelligence Database      |
 
-
 ## 🏗️ System Architecture
 
-![Mini Trends Intelligence System Architecture](docs/images/system-architecture.png)
+The Mini Trends Intelligence System follows a modular AI-powered intelligence architecture where every incoming data source passes through multiple intelligence layers before becoming actionable insights.
+
+```text
+External APIs
+      │
+      ▼
+Canonical Normalization
+      │
+      ▼
+Central Intelligence Database
+      │
+      ▼
+Country Intelligence
+      │
+      ▼
+Trend Intelligence
+      │
+      ▼
+Viral Intelligence
+      │
+      ▼
+Keyword Intelligence
+      │
+      ▼
+Master Topic Mapping
+      │
+      ▼
+Internal Linking Engine
+      │
+      ▼
+Insights Intelligence
+      │
+      ▼
+AI Content Intelligence
+      │
+      ▼
+Decision Support Dashboard
+```
+
+This layered intelligence architecture enables the platform to transform fragmented digital signals into structured, interconnected, and actionable intelligence for decision-makers.
+
 
 The platform follows a modular AI-powered intelligence architecture that collects, normalizes, analyzes, and transforms global digital signals into actionable intelligence through interconnected intelligence engines.
 
