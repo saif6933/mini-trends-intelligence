@@ -285,3 +285,101 @@ Developer: Saif Ullah
 Project Status: Active Development
 
 Development: Daily Continuous Progress
+
+
+System Architecture
+                         ┌────────────────────────────┐
+                         │      External APIs         │
+                         │ Google • YouTube • News   │
+                         │ Reddit • Social Platforms │
+                         └─────────────┬─────────────┘
+                                       │
+                                       ▼
+                         ┌────────────────────────────┐
+                         │   Data Collection Layer    │
+                         │ API Fetchers / Connectors  │
+                         └─────────────┬─────────────┘
+                                       │
+                                       ▼
+                    ┌────────────────────────────────────┐
+                    │ Canonical Normalization Engine     │
+                    │                                    │
+                    │ • Alias Detection                  │
+                    │ • Duplicate Removal                │
+                    │ • Canonical Mapping                │
+                    │ • Keyword Validation               │
+                    │ • Standardization                  │
+                    └─────────────┬──────────────────────┘
+                                  │
+                                  ▼
+                    ┌────────────────────────────────────┐
+                    │ Central Intelligence Database      │
+                    │                                    │
+                    │ Historical Data                    │
+                    │ Country Data                       │
+                    │ Trend Data                         │
+                    │ Viral Data                         │
+                    │ Keyword Data                       │
+                    └─────────────┬──────────────────────┘
+                                  │
+             ┌────────────────────┼────────────────────┐
+             ▼                    ▼                    ▼
+     Country Engine         Trend Engine        Viral Engine
+             │                    │                    │
+             └──────────────┬─────┴──────────────┬─────┘
+                            ▼                    ▼
+                  Keyword Intelligence Engine
+                            │
+                            ▼
+                 Master Topic Mapping Engine
+                            │
+                            ▼
+                 Internal Linking Engine
+                            │
+                            ▼
+                Insights Intelligence Engine
+                            │
+       ┌────────────────────┼────────────────────┐
+       ▼                    ▼                    ▼
+  Trend Prediction     Content Intelligence   eCPM Intelligence
+       │                    │                    │
+       └────────────────────┼────────────────────┘
+                            ▼
+                    Home Intelligence Dashboard
+Development Roadmap
+Phase	Status	Description
+Phase 1	✅ Complete	Project Foundation (Next.js, TypeScript, UI, Routing)
+Phase 2	✅ Complete	Core Pages (Home, Trends, Viral, Keywords, Insights)
+Phase 3	✅ Complete	Intelligence Layer Architecture
+Phase 4	✅ Complete	SEO Foundation (Sitemap, Meta Structure, SEO Architecture)
+Phase 5	✅ Complete	Country Intelligence Database (13+ Countries, 100+ Keywords each)
+Phase 6	🔄 In Progress	Canonical Keyword Normalization Engine
+Phase 7	⏳ Planned	Master Topic Mapping (Country ↔ Trends ↔ Viral ↔ Keywords)
+Phase 8	⏳ Planned	Trends Intelligence Upgrade (Top Trending Content + Scoring)
+Phase 9	⏳ Planned	Viral Intelligence Upgrade (Top Viral Content + Scoring)
+Phase 10	⏳ Planned	Internal Linking & Connectivity (All Intelligence Pages Connected)
+Phase 11	⏳ Planned	Insights Intelligence Engine (Predictions, Rankings, Country Comparison, eCPM Intelligence)
+Phase 12	⏳ Planned	AI Content Intelligence Engine + Real Data Integration + Central Intelligence Database
+Final Vision
+Google
+YouTube
+News APIs
+Social Platforms
+        │
+        ▼
+ Keyword Normalization
+        │
+        ▼
+ Central Intelligence Database
+        │
+        ▼
+ Country + Trends + Viral + Keywords
+        │
+        ▼
+ Insights Engine
+        │
+        ▼
+ AI Content Intelligence
+        │
+        ▼
+ Global Trends Intelligence Platform
