@@ -386,4 +386,4 @@ Social Platforms
 
 ## Live Demo
 
-https://your-vercel-url.vercel.app
+(https://mini-trends-intelligence.vercel.app)
