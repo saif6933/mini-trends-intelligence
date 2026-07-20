@@ -384,4 +384,6 @@ Social Platforms
         ▼
  Global Trends Intelligence Platform
 
+## Live Demo
 
+https://your-vercel-url.vercel.app
