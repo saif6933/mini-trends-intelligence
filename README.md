@@ -361,28 +361,11 @@ Development: Daily Continuous Progress
 | Phase 12 | ⏳ Planned      | AI Content Intelligence Engine + Real Data Integration + Central Intelligence Database      |
 
 
-Google
-YouTube
-News APIs
-Social Platforms
-        │
-        ▼
- Keyword Normalization
-        │
-        ▼
- Central Intelligence Database
-        │
-        ▼
- Country + Trends + Viral + Keywords
-        │
-        ▼
- Insights Engine
-        │
-        ▼
- AI Content Intelligence
-        │
-        ▼
- Global Trends Intelligence Platform
+## 🏗️ System Architecture
+
+![Mini Trends Intelligence System Architecture](docs/images/system-architecture.png)
+
+The platform follows a modular AI-powered intelligence architecture that collects, normalizes, analyzes, and transforms global digital signals into actionable intelligence through interconnected intelligence engines.
 
 ## Live Demo
 
