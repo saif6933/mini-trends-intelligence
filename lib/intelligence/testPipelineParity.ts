@@ -1,21 +1,15 @@
 // ==========================================================
 // Mini Trends Intelligence System
-// Side-by-Side Pipeline Test Script (Phase 3.1.5 - Step 4 - Ideal Clean Version)
-// Version 2.6 - Pure Runtime Observation without Re-creation
+// Side-by-Side Pipeline Test Script (Phase 3.1.5 - Step 5 Clean)
 // ==========================================================
 
 import { runIntelligencePipeline, PipelineInputItem } from "./pipelineIntegration";
 import { processKeywordIdentity } from "./keywordIdentityEngine";
 import { attachContext } from "./contextEngine";
 import { SignalEngine } from "./signalEngine";
-import { classifyEntityIdentity } from "./identityClassificationEngine"; // Step 3
-import { verifyClassifiedEntity } from "./verificationEngine";       // Step 3
+import { classifyEntityIdentity } from "./identityClassificationEngine";
+import { verifyClassifiedEntity } from "./verificationEngine";
 
-/**
- * Executes the pipeline and observes the raw output structure 
- * without making any assumptions about internal keys or fields,
- * and cleanly observes existing runtime outputs without duplication.
- */
 export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): {
   isParityAchieved: boolean;
   legacySummary: any;
@@ -24,7 +18,6 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
 } {
   const discrepancies: string[] = [];
 
-  // --- STEP 2B STRICT EVIDENCE-BASED RUNTIME TRACE ---
   console.log("\n=== [STEP 2B] STRICT RUNTIME TRACE STARTED ===");
   const signalEngine = new SignalEngine();
 
@@ -32,61 +25,116 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
     const identityResult = processKeywordIdentity(item.rawKeyword);
     const enrichedResult = attachContext(identityResult, item.context);
     signalEngine.addSignal(enrichedResult);
-
-    console.log(`\n[Trace Item ${index + 1}: ${item.rawKeyword}] -> Enriched Result Keys:`, Object.keys(enrichedResult));
-    console.log(`[Trace Item ${index + 1}: ${item.rawKeyword}] -> Enriched Result Full Shape:`, JSON.stringify(enrichedResult, null, 2));
   });
 
   const aggregatedSignals = signalEngine.getAggregatedSignals();
-  console.log(`\n[Trace] Aggregated Signals Count: ${aggregatedSignals.length}`);
-  if (aggregatedSignals.length > 0) {
-    console.log("[Trace] Sample Aggregated Signal Keys:", Object.keys(aggregatedSignals[0]));
-    console.log("[Trace] Sample Aggregated Signal Full Shape:", JSON.stringify(aggregatedSignals[0], null, 2));
-  }
+  console.log(`[Trace] Aggregated Signals Count: ${aggregatedSignals.length}`);
   console.log("=== [STEP 2B] STRICT RUNTIME TRACE ENDED ===\n");
-  // --------------------------------------------------
 
-  // --- STEP 3: IDENTITY CLASSIFICATION & VERIFICATION RUNTIME TRACE ---
   console.log("=== [STEP 3] RUNTIME TRACE STARTED ===");
-  aggregatedSignals.forEach((aggregated, index) => {
-    const classified = classifyEntityIdentity(aggregated);
-    const verification = verifyClassifiedEntity(classified);
-
-    console.log(`\n[Trace Step 3 - Item ${index + 1}: ${aggregated.canonical}]`);
-    console.log("  -> Classified Result Shape:", JSON.stringify(classified, null, 2));
-    console.log("  -> Verification Result Shape:", JSON.stringify(verification, null, 2));
+  aggregatedSignals.forEach((aggregated) => {
+    classifyEntityIdentity(aggregated);
+    verifyClassifiedEntity(classifyEntityIdentity(aggregated));
   });
   console.log("=== [STEP 3] RUNTIME TRACE ENDED ===\n");
-  // -------------------------------------------------------------------
 
-  // 1. Run legacy verification flow mock/baseline check
   let legacyResult: any = null;
-  try {
-    legacyResult = null; 
-  } catch (error) {
-    discrepancies.push(`Legacy flow execution error: ${error}`);
-  }
-
-  // 2. Run new intelligence pipeline flow (Which internally handles classification, verification, and reporting)
   let newPipelineResult: any = null;
+
   try {
     newPipelineResult = runIntelligencePipeline(rawInputs);
   } catch (error) {
     discrepancies.push(`New pipeline execution error: ${error}`);
   }
 
-  // --- STEP 4: REPORTING ENGINE PURE RUNTIME OBSERVATION ---
-  console.log("=== [STEP 4] REPORTING ENGINE PURE RUNTIME OBSERVATION STARTED ===");
-  if (newPipelineResult) {
-    console.log("  -> Observed Final Report Summary Shape:", JSON.stringify(newPipelineResult.summary, null, 2));
-    console.log("  -> Observed Canonical Entities Count:", newPipelineResult.canonicalEntities?.length || 0);
-    console.log("  -> Observed Verification Results Count:", newPipelineResult.verificationResults?.length || 0);
-    console.log("  -> Observed Final Report Keys:", Object.keys(newPipelineResult));
+  console.log("=== [STEP 5] FULL PIPELINE PARITY & DISCREPANCY ANALYSIS STARTED ===");
+  
+  const expectedMappings: Record<string, string> = {
+    "AI": "Artificial Intelligence",
+    "Artificial Intelligence": "Artificial Intelligence",
+    "Chat GPT": "ChatGPT",
+    "ChatGPT": "ChatGPT",
+    "Open AI": "OpenAI",
+    "OpenAI": "OpenAI",
+    "USA": "United States",
+    "United States": "United States",
+    "Bharat": "India",
+    "India": "India",
+    "FIFA": "FIFA",
+    "Premier League": "Premier League",
+    "Google Gemini": "Google Gemini",
+    "Claude": "Claude"
+  };
+
+  let passedCount = 0;
+  let failedCount = 0;
+  let mismatchCount = 0;
+  let missingCount = 0;
+
+  if (newPipelineResult && newPipelineResult.canonicalEntities) {
+    console.log("\n--- FULL PIPELINE PARITY & DISCREPANCY REPORT ---");
+    console.log("Input Keyword      | Expected Canonical   | Actual Canonical     | Classification       | Verification | Match Status");
+    console.log("----------------------------------------------------------------------------------------------------------------------");
+
+    rawInputs.forEach((item) => {
+      const expected = expectedMappings[item.rawKeyword] || item.rawKeyword;
+      
+      let foundEntity: any = null;
+      let matchedClassification = "Unknown";
+
+      for (const entity of newPipelineResult.canonicalEntities) {
+        if (entity.canonical.toLowerCase() === expected.toLowerCase() || 
+            entity.canonical.toLowerCase() === item.rawKeyword.toLowerCase()) {
+          foundEntity = entity;
+          matchedClassification = entity.classification || "Canonical Match";
+          break;
+        }
+      }
+
+      let verificationStatus = "Unknown";
+      if (foundEntity && newPipelineResult.verificationResults) {
+        const vResult = newPipelineResult.verificationResults.find(
+          (v: any) => v.entityCanonical.toLowerCase() === foundEntity.canonical.toLowerCase()
+        );
+        if (vResult) {
+          verificationStatus = vResult.verification.valid ? "✅ Valid" : "❌ Invalid";
+        }
+      }
+
+      const actual = foundEntity ? foundEntity.canonical : "NOT_FOUND";
+      
+      let isMatch = "❌ MISMATCH";
+      if (actual === "NOT_FOUND") {
+        missingCount++;
+        failedCount++;
+      } else if (actual.toLowerCase() === expected.toLowerCase()) {
+        isMatch = "✅ MATCH";
+        passedCount++;
+      } else {
+        mismatchCount++;
+        failedCount++;
+      }
+
+      console.log(
+        `${item.rawKeyword.padEnd(18)} | ${expected.padEnd(20)} | ${actual.padEnd(20)} | ${matchedClassification.padEnd(20)} | ${verificationStatus.padEnd(12)} | ${isMatch}`
+      );
+    });
+    console.log("----------------------------------------------------------------------------------------------------------------------");
+    
+    console.log("\n--- PIPELINE PARITY SUMMARY METRICS ---");
+    console.log(`  🔹 Total Inputs Processed : ${rawInputs.length}`);
+    console.log(`  🟢 Passed / Matched       : ${passedCount}`);
+    console.log(`  🔴 Failed / Total Issues  : ${failedCount}`);
+    console.log(`  ⚠️ Canonical Mismatches   : ${mismatchCount}`);
+    console.log(`  ❓ Missing Entities       : ${missingCount}`);
+    console.log(`  📊 Pipeline Valid Entities: ${newPipelineResult.summary?.validEntities || 0}`);
+    console.log(`  📊 Pipeline Total Signals : ${newPipelineResult.summary?.totalSignals || 0}`);
+    console.log("----------------------------------------\n");
   } else {
-    console.log("  -> Warning: New pipeline result is null, cannot observe reporting output.");
+    console.log("  -> Warning: New pipeline result is null or missing canonicalEntities.");
   }
-  console.log("=== [STEP 4] REPORTING ENGINE PURE RUNTIME OBSERVATION ENDED ===\n");
-  // ---------------------------------------------------------
+
+  console.log("=== [STEP 5] FULL PIPELINE PARITY & DISCREPANCY ANALYSIS ENDED ===\n");
 
   const isParityAchieved = discrepancies.length === 0;
 
@@ -98,27 +146,29 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
   };
 }
 
-/**
- * Runtime Step 2A/2B/3/4 Observation Wrapper
- */
 export function executeRuntimeStep1(): {
   isParityAchieved: boolean;
   newPipelineSummary: any;
   discrepancies: string[];
 } {
-  // Test input to inspect observation structure
   const observationDataset: PipelineInputItem[] = [
     { rawKeyword: "AI" },
-    { rawKeyword: "ChatGPT" }
+    { rawKeyword: "Artificial Intelligence" },
+    { rawKeyword: "Chat GPT" },
+    { rawKeyword: "ChatGPT" },
+    { rawKeyword: "Open AI" },
+    { rawKeyword: "OpenAI" },
+    { rawKeyword: "USA" },
+    { rawKeyword: "United States" },
+    { rawKeyword: "Bharat" },
+    { rawKeyword: "India" },
+    { rawKeyword: "FIFA" },
+    { rawKeyword: "Premier League" },
+    { rawKeyword: "Google Gemini" },
+    { rawKeyword: "Claude" }
   ];
 
   const result = testIntelligencePipelineParity(observationDataset);
-  
-  // Explicitly print raw output structure to the terminal for evidence gathering
-  console.log("=== STEP 2A/2B/3/4: RUNTIME OUTPUT STRUCTURE OBSERVATION ===");
-  console.log("Raw New Pipeline Summary Output:");
-  console.log(JSON.stringify(result.newPipelineSummary, null, 2));
-
   return {
     isParityAchieved: result.isParityAchieved,
     newPipelineSummary: result.newPipelineSummary,
