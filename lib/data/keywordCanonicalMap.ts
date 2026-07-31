@@ -61,5 +61,72 @@ export const keywordCanonicalMap: KeywordCanonical[] = [
     ],
   },
 
+  {
+    id: "chatgpt",
+    canonical: "ChatGPT",
+    variants: [
+      "ChatGPT",
+      "Chat GPT",
+    ],
+  },
+
+  {
+    id: "openai",
+    canonical: "OpenAI",
+    variants: [
+      "OpenAI",
+      "Open AI",
+    ],
+  },
+
+  {
+    id: "united-states",
+    canonical: "United States",
+    variants: [
+      "United States",
+      "USA",
+    ],
+  },
+
+  {
+    id: "india",
+    canonical: "India",
+    variants: [
+      "India",
+      "Bharat",
+    ],
+  },
+
+  {
+    id: "fifa",
+    canonical: "FIFA",
+    variants: [
+      "FIFA",
+    ],
+  },
+
+  {
+    id: "premier-league",
+    canonical: "Premier League",
+    variants: [
+      "Premier League",
+    ],
+  },
+
+  {
+    id: "google-gemini",
+    canonical: "Google Gemini",
+    variants: [
+      "Google Gemini",
+    ],
+  },
+
+  {
+    id: "claude",
+    canonical: "Claude",
+    variants: [
+      "Claude",
+    ],
+  },
 
 ];

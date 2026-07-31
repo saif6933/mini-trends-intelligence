@@ -4,15 +4,32 @@ import {
 } from "./identityTypes";
 
 import { entityRegistry } from "./entityRegistry";
+import { keywordCanonicalMap } from "../data/keywordCanonicalMap";
 
 export function resolveKeywordIdentity(
   keyword: string
 ): IdentityDecision {
 
+  const trimmedKeyword = keyword.trim().toLowerCase();
+
+  let resolvedCanonical = keyword.trim();
+
+  for (const entry of keywordCanonicalMap) {
+    const matchesCanonical = entry.canonical.toLowerCase() === trimmedKeyword;
+    const matchesVariant = entry.variants.some(
+      (v) => v.toLowerCase() === trimmedKeyword
+    );
+
+    if (matchesCanonical || matchesVariant) {
+      resolvedCanonical = entry.canonical;
+      break;
+    }
+  }
+
   const entity = entityRegistry.find(
     (item) =>
       item.canonical.toLowerCase() ===
-      keyword.trim().toLowerCase()
+      resolvedCanonical.toLowerCase()
   );
 
   if (entity) {
@@ -23,10 +40,15 @@ export function resolveKeywordIdentity(
     };
   }
 
+  entityRegistry.push({
+    canonical: resolvedCanonical,
+    signals: [],
+  });
+
   return {
-    type: IdentityType.UNKNOWN_ENTITY,
-    canonical: keyword.trim(),
-    reason: "Entity not found",
+    type: IdentityType.CANONICAL_MATCH,
+    canonical: resolvedCanonical,
+    reason: "Resolved via canonical map and registered",
   };
 
 }

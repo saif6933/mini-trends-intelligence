@@ -33,8 +33,8 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
 
   console.log("=== [STEP 3] RUNTIME TRACE STARTED ===");
   aggregatedSignals.forEach((aggregated) => {
-    classifyEntityIdentity(aggregated);
-    verifyClassifiedEntity(classifyEntityIdentity(aggregated));
+    const classified = classifyEntityIdentity(aggregated);
+    verifyClassifiedEntity(classified);
   });
   console.log("=== [STEP 3] RUNTIME TRACE ENDED ===\n");
 
@@ -46,6 +46,50 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
   } catch (error) {
     discrepancies.push(`New pipeline execution error: ${error}`);
   }
+
+  // --- TEMPORARY DEBUG PATCH START ---
+  console.log("\n=== [DEBUG TRACE] RUNTIME PIPELINE OUTPUT INSPECTION ===");
+  if (newPipelineResult) {
+    const res = newPipelineResult as any;
+
+    console.log("--- canonicalEntities ---");
+    console.log(JSON.stringify(res.canonicalEntities, null, 2));
+
+    console.log("--- aliasMerges ---");
+    console.log(JSON.stringify(res.aliasMerges, null, 2));
+
+    console.log("--- trueDuplicates ---");
+    console.log(JSON.stringify(res.trueDuplicates, null, 2));
+
+    console.log("--- conflictDuplicates ---");
+    console.log(JSON.stringify(res.conflictDuplicates, null, 2));
+
+    console.log("--- verificationResults ---");
+    console.log(JSON.stringify(res.verificationResults, null, 2));
+
+    console.log("--- Summary ---");
+    console.log(JSON.stringify(res.summary, null, 2));
+
+    console.log("--- List of Canonical Names Only ---");
+    if (res.canonicalEntities) {
+      const canonicalNames = res.canonicalEntities.map((e: any) => e.canonical);
+      console.log(canonicalNames);
+    }
+
+    console.log("--- List of Alias Merge Details ---");
+    if (res.aliasMerges) {
+      const aliasDetails = res.aliasMerges.map((e: any) => ({
+        canonical: e.canonical,
+        classification: e.classification,
+        reason: e.reason,
+      }));
+      console.log(aliasDetails);
+    }
+  } else {
+    console.log("newPipelineResult is null or undefined.");
+  }
+  console.log("=== [DEBUG TRACE] END ===\n");
+  // --- TEMPORARY DEBUG PATCH END ---
 
   console.log("=== [STEP 5] FULL PIPELINE PARITY & DISCREPANCY ANALYSIS STARTED ===");
   
@@ -82,7 +126,12 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
       let foundEntity: any = null;
       let matchedClassification = "Unknown";
 
-      for (const entity of newPipelineResult.canonicalEntities) {
+      const allEntities = [
+          ...(newPipelineResult.canonicalEntities ?? []),
+          ...(newPipelineResult.aliasMerges ?? []),
+      ];
+
+      for (const entity of allEntities) {
         if (entity.canonical.toLowerCase() === expected.toLowerCase() || 
             entity.canonical.toLowerCase() === item.rawKeyword.toLowerCase()) {
           foundEntity = entity;
@@ -107,12 +156,14 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
       if (actual === "NOT_FOUND") {
         missingCount++;
         failedCount++;
+        discrepancies.push(`Missing entity for input keyword: "${item.rawKeyword}" (Expected: "${expected}")`);
       } else if (actual.toLowerCase() === expected.toLowerCase()) {
         isMatch = "✅ MATCH";
         passedCount++;
       } else {
         mismatchCount++;
         failedCount++;
+        discrepancies.push(`Canonical mismatch for input keyword: "${item.rawKeyword}" (Expected: "${expected}", Actual: "${actual}")`);
       }
 
       console.log(
@@ -132,6 +183,7 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
     console.log("----------------------------------------\n");
   } else {
     console.log("  -> Warning: New pipeline result is null or missing canonicalEntities.");
+    discrepancies.push("New pipeline result is null or missing canonicalEntities.");
   }
 
   console.log("=== [STEP 5] FULL PIPELINE PARITY & DISCREPANCY ANALYSIS ENDED ===\n");

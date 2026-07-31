@@ -40,11 +40,19 @@ export function classifyEntityIdentity(
     classification = "Unknown Entity";
     reason = "Entity could not be mapped to a known canonical reference.";
   } else if (signals.length > 1) {
-    // Basic structural classification rules based on signal volume/patterns
     const uniqueSignalTypes = new Set(signals.map((s) => s.signalType));
+    
+    // Check if signals came from different raw/normalized keyword variants (Alias Merge)
+    const uniqueRawKeywords = new Set(
+      signals.map((s) => s.rawKeyword || s.normalizedKeyword || "").filter(Boolean)
+    );
+
     if (uniqueSignalTypes.size > 1) {
       classification = "Conflict Duplicate";
       reason = "Multiple conflicting signal types detected under the same canonical entity.";
+    } else if (uniqueRawKeywords.size > 1) {
+      classification = "Alias Duplicate";
+      reason = "Multiple signals mapped to the same canonical entity from different variants/aliases.";
     } else {
       classification = "True Duplicate";
       reason = "Multiple identical signals grouped under the same canonical entity.";

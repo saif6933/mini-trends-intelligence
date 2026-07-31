@@ -12,6 +12,8 @@ export interface SignalItem {
   source: string;
   signalType: string;
   collectedAt: string;
+  rawKeyword?: string;
+  normalizedKeyword?: string;
 }
 
 export interface AggregatedSignalResult {
@@ -39,6 +41,8 @@ export class SignalEngine {
       source: enrichedResult.context.source,
       signalType: enrichedResult.context.signalType,
       collectedAt: enrichedResult.context.collectedAt,
+      rawKeyword: enrichedResult.rawKeyword,
+      normalizedKeyword: enrichedResult.normalizedKeyword,
     };
 
     if (!this.signalMap.has(canonicalKey)) {
