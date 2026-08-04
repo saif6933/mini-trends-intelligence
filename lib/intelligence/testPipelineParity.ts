@@ -21,7 +21,7 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
   console.log("\n=== [STEP 2B] STRICT RUNTIME TRACE STARTED ===");
   const signalEngine = new SignalEngine();
 
-  rawInputs.forEach((item, index) => {
+  rawInputs.forEach((item) => {
     const identityResult = processKeywordIdentity(item.rawKeyword);
     const enrichedResult = attachContext(identityResult, item.context);
     signalEngine.addSignal(enrichedResult);
@@ -46,50 +46,6 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
   } catch (error) {
     discrepancies.push(`New pipeline execution error: ${error}`);
   }
-
-  // --- TEMPORARY DEBUG PATCH START ---
-  console.log("\n=== [DEBUG TRACE] RUNTIME PIPELINE OUTPUT INSPECTION ===");
-  if (newPipelineResult) {
-    const res = newPipelineResult as any;
-
-    console.log("--- canonicalEntities ---");
-    console.log(JSON.stringify(res.canonicalEntities, null, 2));
-
-    console.log("--- aliasMerges ---");
-    console.log(JSON.stringify(res.aliasMerges, null, 2));
-
-    console.log("--- trueDuplicates ---");
-    console.log(JSON.stringify(res.trueDuplicates, null, 2));
-
-    console.log("--- conflictDuplicates ---");
-    console.log(JSON.stringify(res.conflictDuplicates, null, 2));
-
-    console.log("--- verificationResults ---");
-    console.log(JSON.stringify(res.verificationResults, null, 2));
-
-    console.log("--- Summary ---");
-    console.log(JSON.stringify(res.summary, null, 2));
-
-    console.log("--- List of Canonical Names Only ---");
-    if (res.canonicalEntities) {
-      const canonicalNames = res.canonicalEntities.map((e: any) => e.canonical);
-      console.log(canonicalNames);
-    }
-
-    console.log("--- List of Alias Merge Details ---");
-    if (res.aliasMerges) {
-      const aliasDetails = res.aliasMerges.map((e: any) => ({
-        canonical: e.canonical,
-        classification: e.classification,
-        reason: e.reason,
-      }));
-      console.log(aliasDetails);
-    }
-  } else {
-    console.log("newPipelineResult is null or undefined.");
-  }
-  console.log("=== [DEBUG TRACE] END ===\n");
-  // --- TEMPORARY DEBUG PATCH END ---
 
   console.log("=== [STEP 5] FULL PIPELINE PARITY & DISCREPANCY ANALYSIS STARTED ===");
   
@@ -129,6 +85,9 @@ export function testIntelligencePipelineParity(rawInputs: PipelineInputItem[]): 
       const allEntities = [
           ...(newPipelineResult.canonicalEntities ?? []),
           ...(newPipelineResult.aliasMerges ?? []),
+          ...(newPipelineResult.trueDuplicates ?? []),
+          ...(newPipelineResult.conflictDuplicates ?? []),
+          ...(newPipelineResult.intentionalDuplicates ?? []),
       ];
 
       for (const entity of allEntities) {
